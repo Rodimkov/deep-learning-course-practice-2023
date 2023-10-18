@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>391598</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section id="лабораторная-работа-по-курсу-глубокое-обучение" class="cell markdown">
+<h1>Лабораторная работа по курсу "Глубокое обучение"</h1>
+</section>
+<div class="cell code" data-execution_count="1">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> struct</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gzip</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span></code></pre></div>
+</div>
+<section id="считывание-данных" class="cell markdown">
+<h2>Считывание данных</h2>
+</section>
+<div class="cell markdown">
+<p>В данной работе используется набор данных MNIST. Данный набор был предварительно скачен с сайта [<a href="http://yann.lecun.com/exdb/mnist" class="uri">http://yann.lecun.com/exdb/mnist</a>].</p>
+</div>
+<div class="cell markdown">
+<ul>
+<li>train-images-idx3-ubyte.gz; train-labels-idx1-ubyte – обучающие данные и их метки.</li>
+<li>t10k-images-idx3-ubyte, t10k-labels-idx1-ubyte – тестовые данные и их метки.</li>
+</ul>
+</div>
+<div class="cell code" data-execution_count="2">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># функция, возвращающая разархивирующий файл с картинками </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> readBinFileMatrix(nameFile):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    pathFiles <span class="op">=</span> os.getcwd()</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> gzip.<span class="bu">open</span>(pathFiles <span class="op">+</span> <span class="st">&#39;/&#39;</span> <span class="op">+</span>  nameFile,<span class="st">&#39;rb&#39;</span>) <span class="im">as</span> f:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        magic, size <span class="op">=</span> struct.unpack(<span class="st">&quot;&gt;II&quot;</span>, f.read(<span class="dv">8</span>))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        nrows, ncols <span class="op">=</span> struct.unpack(<span class="st">&quot;&gt;II&quot;</span>, f.read(<span class="dv">8</span>))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> np.frombuffer(f.read(), dtype<span class="op">=</span>np.dtype(np.uint8).newbyteorder(<span class="st">&#39;&gt;&#39;</span>))</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> data.reshape((size, nrows, ncols))</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array(data)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># функция, возвращающая разархивирующий файл с метками </span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> readBinFileLabel(nameFile):</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    pathFiles <span class="op">=</span> os.getcwd()</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> gzip.<span class="bu">open</span>(pathFiles <span class="op">+</span> <span class="st">&#39;/&#39;</span> <span class="op">+</span>  nameFile,<span class="st">&#39;rb&#39;</span>) <span class="im">as</span> f:</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        magic, size <span class="op">=</span> struct.unpack(<span class="st">&quot;&gt;II&quot;</span>, f.read(<span class="dv">8</span>))</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> np.frombuffer(f.read(), dtype<span class="op">=</span>np.dtype(np.uint8).newbyteorder(<span class="st">&#39;&gt;&#39;</span>))</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> data.reshape((size,)) </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array(data)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># функция, возвращающая тренировочные и тестовые данные</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> loadData(nameData):</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># nameFile = [&#39;t10k-images.idx3-ubyte&#39;, &#39;t10k-labels.idx1-ubyte&#39;, &#39;train-images.idx3-ubyte&#39;, &#39;train-labels.idx1-ubyte&#39;]</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> nameData <span class="op">==</span> <span class="st">&#39;Xtrain&#39;</span>:</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> readBinFileMatrix(<span class="st">&#39;train-images-idx3-ubyte.gz&#39;</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> nameData <span class="op">==</span> <span class="st">&#39;Ytrain&#39;</span>:</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> readBinFileLabel(<span class="st">&#39;train-labels-idx1-ubyte.gz&#39;</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> nameData <span class="op">==</span> <span class="st">&#39;Xtest&#39;</span>:</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> readBinFileMatrix(<span class="st">&#39;t10k-images-idx3-ubyte.gz&#39;</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> nameData <span class="op">==</span> <span class="st">&#39;Ytest&#39;</span>:</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> readBinFileLabel(<span class="st">&#39;t10k-labels-idx1-ubyte.gz&#39;</span>)  </span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Загрузим тренировочные и тестовые данные. Выведем на экран размерность данных.</p>
+</div>
+<div class="cell code" data-execution_count="3">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>train_x <span class="op">=</span> loadData(<span class="st">&#39;Xtrain&#39;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>train_y<span class="op">=</span> loadData(<span class="st">&#39;Ytrain&#39;</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Shape X_train = </span><span class="sc">{}</span><span class="st">, Shape y_train = </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(train_x.shape, train_y.shape))</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>test_x <span class="op">=</span> loadData(<span class="st">&#39;Xtest&#39;</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>test_y <span class="op">=</span> loadData(<span class="st">&#39;Ytest&#39;</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Shape X_test = </span><span class="sc">{}</span><span class="st">, Shape y_test = </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(test_x.shape, test_y.shape))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Shape X_train = (60000, 28, 28), Shape y_train = (60000,)
+Shape X_test = (10000, 28, 28), Shape y_test = (10000,)
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<p>Проверм, что данные считались корректно. Для этого выведем на экран первую цифру и её метку класса.</p>
+</div>
+<div class="cell code" data-execution_count="4">
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(train_x[<span class="dv">0</span>,:,:], cmap<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Label: </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(train_y[<span class="dv">0</span>]))</span></code></pre></div>
+<div class="output display_data">
+<p><img src="3d305b46b7277cdc34b79a22a5221fca942a1dc1.png" /></p>
+</div>
+<div class="output stream stdout">
+<pre><code>Label: 5
+</code></pre>
+</div>
+</div>
+<section id="нормировка-данных" class="cell markdown">
+<h2>Нормировка данных</h2>
+</section>
+<div class="cell code" data-execution_count="5">
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>train_x <span class="op">=</span> train_x.reshape(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    train_x.shape[<span class="dv">0</span>], train_x.shape[<span class="dv">1</span>]<span class="op">*</span>train_x.shape[<span class="dv">2</span>]).astype(<span class="st">&#39;float32&#39;</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>train_x <span class="op">=</span> train_x <span class="op">/</span> <span class="dv">255</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>train_y <span class="op">=</span> np.eye(<span class="dv">10</span>)[train_y] </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Shape X_train = </span><span class="sc">{}</span><span class="st">, Shape y_train = </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(train_x.shape, train_y.shape))</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># flatten 28x28 to 784x1 vectors, [60000, 784]</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>test_x <span class="op">=</span> test_x.reshape(</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    test_x.shape[<span class="dv">0</span>], test_x.shape[<span class="dv">1</span>]<span class="op">*</span>test_x.shape[<span class="dv">2</span>]).astype(<span class="st">&#39;float32&#39;</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>test_x <span class="op">=</span> test_x <span class="op">/</span> <span class="dv">255</span> </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>test_y <span class="op">=</span> np.eye(<span class="dv">10</span>)[test_y]</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Shape X_test = </span><span class="sc">{}</span><span class="st">, Shape y_test = </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(test_x.shape, test_y.shape))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Shape X_train = (60000, 784), Shape y_train = (60000, 10)
+Shape X_test = (10000, 784), Shape y_test = (10000, 10)
+</code></pre>
+</div>
+</div>
+<section id="математическая-модель" class="cell markdown">
+<h2>Математическая модель</h2>
+</section>
+<div class="cell markdown">
+<p>Рассмотрим двухслойную нейронную сеть</p>
+</div>
+<div class="cell markdown">
+<p><a href="https://wampi.ru/image/RHEMg2t"><img src="https://ic.wampi.ru/2022/12/18/2022-12-15_20-15-21.md.png" alt="2022-12-15_20-15-21.md.png" /></a></p>
+</div>
+<div class="cell markdown">
+<p>где</p>
+<ul>
+<li>$  x_i$ - множество входных сигналов</li>
+<li>$  u_j$ - выход сети</li>
+<li>$  v_s$ - выходной сигнал нейрона скрытого слоя</li>
+<li>$  w_{si}^{(1)} $ и $  w_{js}^{(2)} $ - веса синаптических связей</li>
+</ul>
+</div>
+<div class="cell markdown">
+<p>Модель нейрона описывается следующими уравнениями:</p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$ \ u_k=\sum_{j=1}^{n}w_{k,j}x_j$$</span></p>
+</div>
+<div class="cell markdown">
+<p><span class="math display"> <em>y</em><sub><em>k</em></sub> = <em>φ</em>(<em>u</em><sub><em>k</em></sub>+<em>b</em><sub><em>k</em></sub>)</span></p>
+</div>
+<div class="cell markdown">
+<p>где <span class="math inline"> <em>x</em><sub><em>j</em></sub></span> - входной сигнал, $ w_{k,j} $ - синаптический вес сигнала <span class="math inline"> <em>x</em><sub><em>j</em></sub></span>, $ \varphi $ - функция активации, <span class="math inline"> <em>b</em><sub><em>k</em></sub></span> - смещение.</p>
+</div>
+<div class="cell markdown">
+<p>Метод обратного распространения ошибки определяет стратегию изменения параметров сети $ 𝑤 $ в ходе обучения с использованием градиентных методов оптимизации.</p>
+</div>
+<div class="cell markdown">
+<p>Градиентные методы на каждом шаге уточняют значения параметров: <span class="math inline"> <em>w</em>(<em>k</em>+1) = <em>w</em>(<em>k</em>) + <em>η</em><em>p</em>(<em>w</em>)</span></p>
+</div>
+<div class="cell markdown">
+<p>где</p>
+<ul>
+<li>$  \eta $ , $  0 &lt; \eta &lt; 1 $ – скорость обучения (learning rate) –«скорость» движения в направлении минимального значения функции</li>
+<li>$  𝑝(𝑤) $ – направление в многомерном пространстве параметров нейронной сети</li>
+</ul>
+</div>
+<div class="cell markdown">
+<p>В классическом методе обратного распространения ошибки направление движения совпадает с направлением антиградиента $  𝑝(𝑤) = −\nabla 𝐸(𝑤(𝑘)) $ на 𝑘-ой итерации метода.</p>
+</div>
+<section id="метод-обратного-распространения-ошибки" class="cell markdown">
+<h3>Метод обратного распространения ошибки</h3>
+</section>
+<section id="1-прямой-проход" class="cell markdown">
+<h4>1. Прямой проход</h4>
+</section>
+<div class="cell markdown">
+<ol>
+<li>Вычисление значений выходных сигналов нейронов всех слоев</li>
+<li>Вычисление значений производных функций активации на каждом слое сети</li>
+</ol>
+</div>
+<div class="cell markdown">
+<p>Выходной сигнал нейрона скрытого слоя описывается следующим образом:</p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$ \ v_s = \varphi ^{(1)} (\sum_{i=1}^{N}w_{si}^{(1)}x_i) $$</span></p>
+</div>
+<div class="cell markdown">
+<p>Сигнал 𝑗-ого нейрона выходного слоя:</p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$ \ u_j = \varphi ^{(2)}(\sum_{s=0}^{K}w_{js}^{(2)}v_s) = \varphi ^{(2)}(\sum_{s=0}^{K}w_{js}^{(2)}\varphi ^{(1)} (\sum_{i=0}^{N}w_{si}^{(1)}x_i)), \ j = 1,M $$</span></p>
+</div>
+<div class="cell markdown">
+<p>В качестве функции активации на скрытом слое используется ReLU (Rectified Linear Unit).</p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$ \ \varphi(v) = \begin{cases} 0,v \leq 0 \\ v,v&gt;0 \end{cases}$$</span></p>
+</div>
+<div class="cell markdown">
+<p><a href="https://wampi.ru/image/RHEMDAg"><img src="https://im.wampi.ru/2022/12/18/2022-12-18_11-51-48.png" alt="2022-12-18_11-51-48.png" /></a></p>
+</div>
+<div class="cell markdown">
+<p>Её производная есть</p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$ \ \varphi(v)^{'} = \begin{cases} 0,v \leq 0 \\ 1,v&gt;0 \end{cases}$$</span></p>
+</div>
+<div class="cell markdown">
+<p>В качестве функции активациии на выходном слое используется функция softmax.</p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$\ \varphi(u_j) = \frac{e^{u_j} }{\sum_{i=1}^{M} e^{u_i}} $$</span></p>
+</div>
+<section id="2-обратный-проход" class="cell markdown">
+<h4>2. Обратный проход</h4>
+</section>
+<div class="cell markdown">
+<ol>
+<li>Вычисление целевой функции 𝐸 и ее градиента $ \frac{\partial E }{\partial w_{js}^{(2)}} $ и <span class="math inline">$\ \frac{\partial E }{\partial w_{si}^{(1)}}$</span></li>
+<li>Коррекция весов $ 𝑤(𝑘 + 1) = 𝑤(𝑘) − \eta \nabla 𝐸(𝑤(𝑘)) $</li>
+</ol>
+</div>
+<div class="cell markdown">
+<p>В качестве функции ошибки используется кросс-энтропия (или логарифмическая функция потерь – log loss), т.е.</p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$\ E(w) = - \sum_{j=1}^{M}y_j ln(u_j) $$</span></p>
+</div>
+<div class="cell markdown">
+<p>где <span class="math inline"> <em>y</em><sub><em>j</em></sub></span> ожидаемый выход (метки).</p>
+</div>
+<div class="cell markdown">
+<p>Производную целевой функции по весам можно вывести следующим образом:</p>
+</div>
+<div class="cell markdown">
+<p>По весам второго слоя:</p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$\ \frac{\partial E }{\partial w_{js}^{(2)}} = - \sum_{j'=0}^{M} y_{j'} \frac{\partial \ln u_{j'}}{\partial w_{js}^{(2)}} =   - \sum_{j'=0}^{M} y_{j'} \frac{1}{u_{j'}} \frac{\partial u_{j'}}{\partial w_{js}^{(2)}}$$</span></p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$ \ \frac{\partial u_{j'}}{\partial w_{js}^{(2)}} = \frac{\partial \varphi ^{(2)} (g_{j'})}{\partial g_{j}} \frac{\partial g_{j}}{\partial w_{js}^{(2)}} = \varphi (g_{j'}) (\delta_{j,j'}-\varphi(g_i)) \frac{\partial g_j}{\partial w_{js}^{(2)}}$$</span></p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$ \ g_j = \sum_{s=0}^K w_{ij}^{(2)}v_s;  \frac{\partial g_j}{\partial w_{js}^{(2)}} = v_s$$</span></p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$\ \frac{\partial E }{\partial w_{js}^{(2)}} = - \sum_{j'=0}^{M} y_{j'} (\delta_{j,j'}-\varphi^{(2)}(g_i))v_s = (\varphi^{(2)}(g_j) \sum_{j'=0}^{M} y_{j'} - y_i )v_s $$</span></p>
+</div>
+<div class="cell markdown">
+<p>из условия $  \sum_{j=1}^M y_j = 1$ получаем</p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$\ \frac{\partial E }{\partial w_{js}^{(2)}} = (\partial^{(2)}(g_j) - y_j)v_s $$</span></p>
+</div>
+<div class="cell markdown">
+<p>По весам первого слоя</p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$\ \frac{\partial E }{\partial w_{si}^{(1)}} = - \sum_{j'=0}^{M} y_{j'} \frac{\partial \ln u_{j'}}{\partial w_{si}^{(1)}} = - \sum_{j'=0}^{M} y_{j'}  \frac{1}{u_{j'}} \frac{\partial u_{j'}}{\partial w_{si}^{(1)}}$$</span></p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$ \ \frac{\partial u_{j'}}{\partial w_{si}^{(1)}} = \frac{\partial \varphi ^{(2)} (g_{j'})}{\partial g_{j}} \frac{\partial g_{j}}{\partial w_{si}^{(1)}} = \varphi^{(2)} (g_{j'}) (\delta_{j',j}-\varphi^{(2)}(g_i)) w_{js}^{(2)} \frac{\partial \varphi_i^{(1)}}{\partial w_{si}^{(1)}}x_i$$</span></p>
+</div>
+<div class="cell markdown">
+<p><span class="math display">$$\ \frac{\partial E }{\partial w_{si}^{(1)}} = (\sum_{j'=0}^M (y_{j'}-u_{j'})w_{j's}^{(2)})\frac{\partial \varphi_i^{(1)}}{\partial w_{si}^{(1)}}x_i $$</span></p>
+</div>
+<section id="программная-реализация" class="cell markdown">
+<h2>Программная реализация</h2>
+</section>
+<div class="cell code" data-execution_count="6">
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># определение функции активации ReLU на скрытом слое</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ReLU(x):</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.maximum(x, <span class="dv">0</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># определение производной функции автивации ReLU</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ReLuDerivative(x):</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    x[x <span class="op">&lt;=</span> <span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    x[x <span class="op">&gt;</span> <span class="dv">0</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># определение функции активации softmax на выходном слое</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> softmax(x):</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    exp <span class="op">=</span> np.exp(x)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> exp <span class="op">/</span> np.<span class="bu">sum</span>(exp, axis <span class="op">=</span> <span class="dv">1</span>, keepdims <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co"># определение функции ошибки кросс-энтропия</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> crossEntropyLoss(x1, x2):</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.mean(<span class="op">-</span>np.<span class="bu">sum</span>(x1 <span class="op">*</span> np.log(x2), axis<span class="op">=</span><span class="dv">1</span>))</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co"># функция подсчета точности на тестовой или обучающей выборке </span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> accuracy(x1, x2):</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> np.mean(np.argmax(x1, axis<span class="op">=</span><span class="dv">1</span>) <span class="op">==</span> np.argmax(x2, axis<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Создадим класс NeuralNetwork, который будет содержать имплементацию основных методов нейронной сети</p>
+</div>
+<div class="cell code" data-execution_count="11">
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> NeuralNetwork(<span class="bu">object</span>):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Объявление конструктора</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, input_layer<span class="op">=</span><span class="dv">28</span> <span class="op">*</span> <span class="dv">28</span>, hidden_layer<span class="op">=</span><span class="dv">300</span>, output_layer<span class="op">=</span><span class="dv">10</span>):</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># инициализация</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="co"># количество нейронов входного слоя </span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.input_layer <span class="op">=</span> input_layer</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># количество нейронов скрытого слоя</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.hidden_layer <span class="op">=</span> hidden_layer</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        <span class="co"># количество нейронов выходного слоя</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.output_layer <span class="op">=</span> output_layer</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># w1, w2 (веса синаптических связей) инициализируем нормальным распределением с дисперсией sqrt(input_layer)</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># w1 и b1 массивы для хранения весов и смещений первого слоя</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.w1 <span class="op">=</span> np.random.randn(input_layer, hidden_layer) <span class="op">/</span> np.sqrt(input_layer)</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.b1 <span class="op">=</span> np.zeros((<span class="dv">1</span>, hidden_layer))</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># w2 и b2 массивы для хранения весов и смещений второго слоя</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.w2 <span class="op">=</span> np.random.randn(hidden_layer, output_layer) <span class="op">/</span> np.sqrt(hidden_layer)</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.b2 <span class="op">=</span> np.zeros((<span class="dv">1</span>, output_layer))</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># прямой ход сети</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Возвращает выходной сигнал первого и второго слоя</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.z1 <span class="op">=</span> np.matmul(x, <span class="va">self</span>.w1) <span class="op">+</span> <span class="va">self</span>.b1</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.a1 <span class="op">=</span> ReLU(<span class="va">self</span>.z1)</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.z2 <span class="op">=</span> np.matmul(<span class="va">self</span>.a1, <span class="va">self</span>.w2) <span class="op">+</span> <span class="va">self</span>.b2</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.a2 <span class="op">=</span> softmax(<span class="va">self</span>.z2)</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># обратных ход сети</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># вычисление градиента функции ошибки</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># корректировка весов сети при помощи посчитанных градиентов</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> backward(<span class="va">self</span>, xTrain, yTrain, learningRate):</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>        w1, b1, w2, b2 <span class="op">=</span> <span class="va">self</span>.w1, <span class="va">self</span>.b1, <span class="va">self</span>.w2, <span class="va">self</span>.b2</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>        delta3 <span class="op">=</span> (<span class="va">self</span>.a2 <span class="op">-</span> yTrain) <span class="op">/</span> <span class="va">self</span>.a2.shape[<span class="dv">0</span>]</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>        dW2 <span class="op">=</span> (<span class="va">self</span>.a1.T).dot(delta3)</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>        db2 <span class="op">=</span> np.<span class="bu">sum</span>(delta3, axis<span class="op">=</span><span class="dv">0</span>, keepdims<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>        delta2 <span class="op">=</span> delta3.dot(<span class="va">self</span>.w2.T) <span class="op">*</span> ReLuDerivative(<span class="va">self</span>.z1)</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>        dW1 <span class="op">=</span> np.dot(xTrain.T, delta2)</span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>        db1 <span class="op">=</span> np.<span class="bu">sum</span>(delta2, axis<span class="op">=</span><span class="dv">0</span>, keepdims<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.w1 <span class="op">+=</span> <span class="op">-</span>learningRate <span class="op">*</span> dW1</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.b1 <span class="op">+=</span> <span class="op">-</span>learningRate <span class="op">*</span> db1</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.w2 <span class="op">+=</span> <span class="op">-</span>learningRate <span class="op">*</span> dW2</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.b2 <span class="op">+=</span> <span class="op">-</span>learningRate <span class="op">*</span> db2</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># пакетное обучение сети на epochs эпохах, скоростью обучения l_rate, размером пакета batch_size</span></span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> train(<span class="va">self</span>, X_train, y_train, num_epochs<span class="op">=</span><span class="dv">10</span>, l_rate<span class="op">=</span><span class="fl">0.1</span>, batch_size<span class="op">=</span><span class="dv">16</span>):</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&#39;Train ...&#39;</span>)</span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>        all_time <span class="op">=</span> time.time()</span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(num_epochs):</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>            epoch_time_start <span class="op">=</span> time.time()</span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>            iteration <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> iteration <span class="op">&lt;</span> <span class="bu">len</span>(X_train):</span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>                <span class="co"># берем часть данных, размером batch_size</span></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>                X_train_batch <span class="op">=</span> X_train[iteration:iteration<span class="op">+</span>batch_size]</span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>                y_train_batch <span class="op">=</span> y_train[iteration:iteration<span class="op">+</span>batch_size]</span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.forward(X_train_batch)</span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.backward(X_train_batch, y_train_batch, l_rate)</span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>                iteration <span class="op">+=</span> batch_size</span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>            epoch_time <span class="op">=</span> time.time()</span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.forward(X_train)</span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a>            crossEntropyValue <span class="op">=</span> crossEntropyLoss(y_train, <span class="va">self</span>.a2)</span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a>            accuracyValue <span class="op">=</span> accuracy(y_train, <span class="va">self</span>.a2)</span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">&#39;Epoch: </span><span class="sc">{}</span><span class="st">; Time: </span><span class="sc">{}</span><span class="st">; Loss: </span><span class="sc">{}</span><span class="st">; Accuracy: </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(epoch, epoch_time <span class="op">-</span> epoch_time_start, crossEntropyValue, accuracyValue))</span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Total train time: </span><span class="sc">{</span>(time.time()<span class="op">-</span>all_time)<span class="sc">:.3f}</span><span class="ss"> sec&quot;</span>)</span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>    <span class="co"># тестирование сети</span></span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a>    <span class="co"># вывод метрик loss и accuracy</span></span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test(<span class="va">self</span>, X_test, y_test):</span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&#39;Test ...&#39;</span>)</span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a>        all_time <span class="op">=</span> time.time()</span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.forward(X_test)</span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a>        crossEntropyValue <span class="op">=</span> crossEntropyLoss(y_test, <span class="va">self</span>.a2)</span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a>        accuracyValue <span class="op">=</span> accuracy(y_test, <span class="va">self</span>.a2)</span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&#39;Loss = </span><span class="sc">{}</span><span class="st">; Accuracy = </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(crossEntropyValue, accuracyValue))</span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Total test time: </span><span class="sc">{</span>time<span class="sc">.</span>time() <span class="op">-</span> all_time<span class="sc">}</span><span class="ss"> sec&quot;</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="12">
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Создание объекта разработанного класса</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork()</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="13">
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Обучение модели на 10 эпохах, скоростью обучения 0.1, размером пакета 16</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>network.train(train_x, train_y, num_epochs<span class="op">=</span><span class="dv">10</span>, l_rate<span class="op">=</span><span class="fl">0.1</span>, batch_size<span class="op">=</span><span class="dv">16</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Train ...
+Epoch: 0; Time: 18.00784158706665; Loss: 0.1349527058387903; Accuracy: 0.9576333333333333
+Epoch: 1; Time: 16.74522376060486; Loss: 0.08370092845220185; Accuracy: 0.9739
+Epoch: 2; Time: 16.751219034194946; Loss: 0.06145281115565548; Accuracy: 0.9806833333333334
+Epoch: 3; Time: 16.82201313972473; Loss: 0.04785633851741321; Accuracy: 0.9845166666666667
+Epoch: 4; Time: 16.820075750350952; Loss: 0.04104109750956039; Accuracy: 0.9866666666666667
+Epoch: 5; Time: 16.89297604560852; Loss: 0.034057166605354766; Accuracy: 0.989
+Epoch: 6; Time: 16.794084787368774; Loss: 0.02821324932708801; Accuracy: 0.9910333333333333
+Epoch: 7; Time: 17.208982706069946; Loss: 0.02268514669964699; Accuracy: 0.9928
+Epoch: 8; Time: 17.462302923202515; Loss: 0.01819413801111785; Accuracy: 0.9944166666666666
+Epoch: 9; Time: 60.03344774246216; Loss: 0.01628618454131359; Accuracy: 0.9952833333333333
+Total train time: 227.006 sec
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="14">
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># тестирование модели</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>network.test(test_x, test_y)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Test ...
+Loss = 0.0735054455477396; Accuracy = 0.9778
+Total test time: 0.17752361297607422 sec
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<p>"Поиграемся" с параметрами модели</p>
+</div>
+<div class="cell code" data-execution_count="15">
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork()</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Обучение модели на 10 эпохах, скоростью обучения 0.1, размером пакета 64</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>network.train(train_x, train_y, num_epochs<span class="op">=</span><span class="dv">10</span>, l_rate<span class="op">=</span><span class="fl">0.1</span>, batch_size<span class="op">=</span><span class="dv">64</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>network.test(test_x, test_y)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Train ...
+Epoch: 0; Time: 5.090388536453247; Loss: 0.24294348513074265; Accuracy: 0.9280666666666667
+Epoch: 1; Time: 5.972088098526001; Loss: 0.1715999161383804; Accuracy: 0.9502
+Epoch: 2; Time: 5.992071628570557; Loss: 0.13298560913337765; Accuracy: 0.9616666666666667
+Epoch: 3; Time: 5.941112518310547; Loss: 0.10770514035803948; Accuracy: 0.9691
+Epoch: 4; Time: 5.963052988052368; Loss: 0.08956400645403255; Accuracy: 0.9745166666666667
+Epoch: 5; Time: 6.005940914154053; Loss: 0.07586757175581064; Accuracy: 0.9786333333333334
+Epoch: 6; Time: 5.945213794708252; Loss: 0.06548302043785972; Accuracy: 0.98185
+Epoch: 7; Time: 5.985988616943359; Loss: 0.05745028924880232; Accuracy: 0.9843666666666666
+Epoch: 8; Time: 6.00201416015625; Loss: 0.05105409641189437; Accuracy: 0.9864166666666667
+Epoch: 9; Time: 5.976008176803589; Loss: 0.04579017932541774; Accuracy: 0.98805
+Total train time: 71.740 sec
+Test ...
+Loss = 0.07396158594576653; Accuracy = 0.9772
+Total test time: 0.26427483558654785 sec
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="16">
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork(input_layer<span class="op">=</span><span class="dv">28</span> <span class="op">*</span> <span class="dv">28</span>, hidden_layer<span class="op">=</span><span class="dv">100</span>, output_layer<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Обучение модели на 10 эпохах, скоростью обучения 0.1, размером пакета 16</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>network.train(train_x, train_y, num_epochs<span class="op">=</span><span class="dv">10</span>, l_rate<span class="op">=</span><span class="fl">0.1</span>, batch_size<span class="op">=</span><span class="dv">64</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>network.test(test_x, test_y)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Train ...
+Epoch: 0; Time: 1.059169054031372; Loss: 0.26034218842562806; Accuracy: 0.9227
+Epoch: 1; Time: 1.4261975288391113; Loss: 0.18869846939711332; Accuracy: 0.9442
+Epoch: 2; Time: 2.0904133319854736; Loss: 0.1485427282522527; Accuracy: 0.9565666666666667
+Epoch: 3; Time: 1.3025224208831787; Loss: 0.12263490128501105; Accuracy: 0.9644833333333334
+Epoch: 4; Time: 2.1153440475463867; Loss: 0.10480436048740525; Accuracy: 0.9695666666666667
+Epoch: 5; Time: 2.0734517574310303; Loss: 0.09198975938093959; Accuracy: 0.9730166666666666
+Epoch: 6; Time: 2.1023786067962646; Loss: 0.08204000656390269; Accuracy: 0.9759666666666666
+Epoch: 7; Time: 2.1023709774017334; Loss: 0.07364010494164555; Accuracy: 0.9785333333333334
+Epoch: 8; Time: 2.06646990776062; Loss: 0.06706364376078995; Accuracy: 0.9800833333333333
+Epoch: 9; Time: 2.1642138957977295; Loss: 0.06142786623959192; Accuracy: 0.9818166666666667
+Total train time: 25.613 sec
+Test ...
+Loss = 0.08833317490485565; Accuracy = 0.9733
+Total test time: 0.1356368064880371 sec
+</code></pre>
+</div>
+</div>
+<section id="контрольный-набор-данных" class="cell markdown">
+<h2>Контрольный набор данных</h2>
+</section>
+<div class="cell markdown">
+<p>Запустим нашу модель на контрольном наборе параметров: размер пачки 64, скорость обучения составляет 0.1, количество скрытых нейронов – 300, количество эпох – 20.</p>
+</div>
+<div class="cell code" data-execution_count="17">
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork(input_layer<span class="op">=</span><span class="dv">28</span> <span class="op">*</span> <span class="dv">28</span>, hidden_layer<span class="op">=</span><span class="dv">300</span>, output_layer<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>network.train(train_x, train_y, num_epochs<span class="op">=</span><span class="dv">20</span>, l_rate<span class="op">=</span><span class="fl">0.1</span>, batch_size<span class="op">=</span><span class="dv">64</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>network.test(test_x, test_y)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Train ...
+Epoch: 0; Time: 4.638623237609863; Loss: 0.2372415223735498; Accuracy: 0.9303333333333333
+Epoch: 1; Time: 5.945101499557495; Loss: 0.16535430731543788; Accuracy: 0.95125
+Epoch: 2; Time: 6.0797953605651855; Loss: 0.12740871082300592; Accuracy: 0.9631
+Epoch: 3; Time: 6.143598318099976; Loss: 0.10327006829697495; Accuracy: 0.9708166666666667
+Epoch: 4; Time: 6.080739259719849; Loss: 0.08650579076716439; Accuracy: 0.9756833333333333
+Epoch: 5; Time: 6.071762800216675; Loss: 0.07396265731808521; Accuracy: 0.9793833333333334
+Epoch: 6; Time: 5.919201374053955; Loss: 0.0645307308825114; Accuracy: 0.9819166666666667
+Epoch: 7; Time: 5.920161724090576; Loss: 0.057073297857151636; Accuracy: 0.9843
+Epoch: 8; Time: 5.926152944564819; Loss: 0.05108395936046026; Accuracy: 0.9859333333333333
+Epoch: 9; Time: 5.907189130783081; Loss: 0.046115866895064916; Accuracy: 0.9874166666666667
+Epoch: 10; Time: 6.098692417144775; Loss: 0.042079473095414516; Accuracy: 0.9886166666666667
+Epoch: 11; Time: 5.923326253890991; Loss: 0.03861578290703333; Accuracy: 0.9896666666666667
+Epoch: 12; Time: 5.94707179069519; Loss: 0.03542242858240878; Accuracy: 0.99045
+Epoch: 13; Time: 6.02488899230957; Loss: 0.03261718990379848; Accuracy: 0.9914333333333334
+Epoch: 14; Time: 5.887335777282715; Loss: 0.03011773525003235; Accuracy: 0.9925666666666667
+Epoch: 15; Time: 5.890272617340088; Loss: 0.02795657889646554; Accuracy: 0.9932833333333333
+Epoch: 16; Time: 5.932122230529785; Loss: 0.02598646160478246; Accuracy: 0.9939666666666667
+Epoch: 17; Time: 5.932113170623779; Loss: 0.024148895523653575; Accuracy: 0.9945166666666667
+Epoch: 18; Time: 6.116644620895386; Loss: 0.022516730664805102; Accuracy: 0.9950666666666667
+Epoch: 19; Time: 6.121629476547241; Loss: 0.020971720196515484; Accuracy: 0.9954833333333334
+Total train time: 144.532 sec
+Test ...
+Loss = 0.06453382283579312; Accuracy = 0.9803
+Total test time: 0.2722773551940918 sec
+</code></pre>
+</div>
+</div>
+<section id="реализация-pytorch" class="cell markdown">
+<h2>Реализация PyTorch</h2>
+</section>
+<div class="cell markdown">
+<p>Проверм, достигнута ли точность классификации на тестовых данных для контрольных значений параметров, сравнимая с точностью, которую выдают стандартные инструменты глубокого обучения.</p>
+</div>
+<div class="cell markdown">
+<p>Для этого напишем воспользуемся PyTorch.</p>
+</div>
+<div class="cell code" data-execution_count="18">
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torchvision</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torchvision.datasets</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torchvision.transforms</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.utils.data</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch <span class="im">import</span> nn</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.optim <span class="im">as</span> optim</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plot</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>C:\Users\PC\.conda\envs\deeplean\lib\site-packages\tqdm\auto.py:22: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="19">
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>input_size <span class="op">=</span> <span class="dv">28</span><span class="op">*</span><span class="dv">28</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>hidden_size <span class="op">=</span> <span class="dv">300</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>output_size <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>batch_size <span class="op">=</span> <span class="dv">64</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>num_epochs <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>l_rate <span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> TorchNeuralNetwork(nn.Module):</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Объявление конструктора</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>      <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.layer1 <span class="op">=</span> nn.Linear(input_size, hidden_size)</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.relu <span class="op">=</span> nn.ReLU()</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.layer2 <span class="op">=</span> nn.Linear(hidden_size, output_size)</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.softmax <span class="op">=</span> nn.Softmax(dim<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Переопределение метода, вызываемого в процессе прямого прохода</span></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>      <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>            out <span class="op">=</span> <span class="va">self</span>.layer1(x)</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>            out <span class="op">=</span> <span class="va">self</span>.relu(out)</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>            out <span class="op">=</span> <span class="va">self</span>.layer2(out)</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>            out <span class="op">=</span> <span class="va">self</span>.softmax(out)</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> out</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Создание объекта разработанного класса</span></span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>nn_model <span class="op">=</span> TorchNeuralNetwork()</span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(nn_model)</span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> optim.SGD(nn_model.parameters(), lr<span class="op">=</span>l_rate)</span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a>loss_func <span class="op">=</span> nn.CrossEntropyLoss()</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>TorchNeuralNetwork(
+  (layer1): Linear(in_features=784, out_features=300, bias=True)
+  (relu): ReLU()
+  (layer2): Linear(in_features=300, out_features=10, bias=True)
+  (softmax): Softmax(dim=0)
+)
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="21">
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>train(nn_model, train_x, train_y, loss_func, optimizer, <span class="dv">64</span>, <span class="dv">20</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Epoch: 0; Time: 2.380633592605591, Loss: 2.2841494977474213; Accuracy: 0.72665
+Epoch: 1; Time: 3.4866771697998047, Loss: 2.147377446293831; Accuracy: 0.7202
+Epoch: 2; Time: 3.3979172706604004, Loss: 2.0820818319916725; Accuracy: 0.7411666666666666
+Epoch: 3; Time: 3.4019062519073486, Loss: 2.0629787296056747; Accuracy: 0.79005
+Epoch: 4; Time: 3.4307913780212402, Loss: 2.0555210188031197; Accuracy: 0.8026333333333333
+Epoch: 5; Time: 3.3630142211914062, Loss: 2.0508678443729877; Accuracy: 0.8093
+Epoch: 6; Time: 3.3919310569763184, Loss: 2.047722462564707; Accuracy: 0.8133833333333333
+Epoch: 7; Time: 3.355032444000244, Loss: 2.0455083772540092; Accuracy: 0.8172833333333334
+Epoch: 8; Time: 3.3819503784179688, Loss: 2.043867826461792; Accuracy: 0.8202
+Epoch: 9; Time: 3.3580188751220703, Loss: 2.042600031942129; Accuracy: 0.82245
+Epoch: 10; Time: 3.3789641857147217, Loss: 2.0416219867765903; Accuracy: 0.8239833333333333
+Epoch: 11; Time: 3.3759748935699463, Loss: 2.0408297553658485; Accuracy: 0.82595
+Epoch: 12; Time: 3.396920680999756, Loss: 2.040179491043091; Accuracy: 0.8273666666666667
+Epoch: 13; Time: 3.4088833332061768, Loss: 2.039628654718399; Accuracy: 0.8284
+Epoch: 14; Time: 3.442798376083374, Loss: 2.039162538945675; Accuracy: 0.82955
+Epoch: 15; Time: 3.445783853530884, Loss: 2.0387645587325096; Accuracy: 0.8308
+Epoch: 16; Time: 3.433814287185669, Loss: 2.0384192280471325; Accuracy: 0.8319166666666666
+Epoch: 17; Time: 3.37896728515625, Loss: 2.038111340254545; Accuracy: 0.8328
+Epoch: 18; Time: 3.3530333042144775, Loss: 2.0378432124853134; Accuracy: 0.8337333333333333
+Epoch: 19; Time: 3.473710775375366, Loss: 2.037606045603752; Accuracy: 0.8347166666666667
+Total train time: 75.773 sec
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="22">
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>test(nn_model, train_x, train_y)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Test ...
+Accuracy test: 0.8347166666666667
+Total test time: 0.3131601810455322 sec
+</code></pre>
+</div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+</body>
+</html>
