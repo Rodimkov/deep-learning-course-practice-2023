@@ -7683,7 +7683,7 @@ a.anchor-link {
     <span class="n">rand_w</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="o">*</span><span class="n">size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
     <span class="n">rand_b</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">scale</span><span class="p">(</span><span class="n">rand_w</span><span class="p">)</span> <span class="p">,</span> <span class="n">scale</span><span class="p">(</span><span class="n">rand_b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">scale</span><span class="p">(</span><span class="n">rand_w</span><span class="p">),</span> <span class="n">scale</span><span class="p">(</span><span class="n">rand_b</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">accuracy</span><span class="p">(</span><span class="n">predictions</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">ground_truth</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -7789,16 +7789,14 @@ a.anchor-link {
 <span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"_T"</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">timeit</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">timeit</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="n">_P</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">_T</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
     <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">_wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">_P</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">_P</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_T</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">_P</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">_P</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">_T</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
         <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="n">stop</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span>
 
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> finished in </span><span class="si">{</span><span class="p">(</span><span class="n">stop</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">s"</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="n">result</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">,</span> <span class="n">stop</span> <span class="o">-</span> <span class="n">start</span>
     <span class="k">return</span> <span class="n">_wrapper</span>
 </pre></div>
 </div>
@@ -7845,15 +7843,23 @@ a.anchor-link {
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Training..."</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">NUM_EPOCHS</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="n">prediction</span><span class="p">,</span> <span class="n">ground_truth</span> <span class="o">=</span> <span class="n">run_epoch</span><span class="p">(</span><span class="n">dnn</span><span class="p">,</span> <span class="n">train_dataloader</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2"> | Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span><span class="w"> </span><span class="n">ground_truth</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">training_time</span> <span class="o">=</span> <span class="mi">0</span>
 
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">NUM_EPOCHS</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="n">ground_truth</span><span class="p">),</span> <span class="n">epoch_time</span> <span class="o">=</span> <span class="n">run_epoch</span><span class="p">(</span><span class="n">dnn</span><span class="p">,</span> <span class="n">train_dataloader</span><span class="p">)</span>
+    <span class="n">training_time</span> <span class="o">+=</span> <span class="n">epoch_time</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"Epoch: </span><span class="si">{</span><span class="n">epoch</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2"> "</span>
+        <span class="sa">f</span><span class="s2">"| Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span><span class="w"> </span><span class="n">ground_truth</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> "</span>
+        <span class="sa">f</span><span class="s2">"| Time: </span><span class="si">{</span><span class="n">epoch_time</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">s"</span>
+    <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Training time: </span><span class="si">{</span><span class="n">training_time</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">s"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Testing..."</span><span class="p">)</span>
 
 <span class="n">dnn</span><span class="o">.</span><span class="n">no_grad</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">prediction</span><span class="p">,</span> <span class="n">ground_truth</span> <span class="o">=</span> <span class="n">run_epoch</span><span class="p">(</span><span class="n">dnn</span><span class="p">,</span> <span class="n">test_dataloader</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span><span class="w"> </span><span class="n">ground_truth</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="n">ground_truth</span><span class="p">),</span> <span class="n">epoch_time</span> <span class="o">=</span> <span class="n">run_epoch</span><span class="p">(</span><span class="n">dnn</span><span class="p">,</span> <span class="n">test_dataloader</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span><span class="w"> </span><span class="n">ground_truth</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> | Time: </span><span class="si">{</span><span class="n">epoch_time</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7867,71 +7873,30 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Training...
-
-run_epoch finished in 1.7350s
-Epoch 01 | Accuracy: 0.8994
-
-run_epoch finished in 1.6410s
-Epoch 02 | Accuracy: 0.9448
-
-run_epoch finished in 1.6560s
-Epoch 03 | Accuracy: 0.9596
-
-run_epoch finished in 1.6720s
-Epoch 04 | Accuracy: 0.9678
-
-run_epoch finished in 1.6560s
-Epoch 05 | Accuracy: 0.9738
-
-run_epoch finished in 1.6410s
-Epoch 06 | Accuracy: 0.9772
-
-run_epoch finished in 1.6560s
-Epoch 07 | Accuracy: 0.9808
-
-run_epoch finished in 1.6870s
-Epoch 08 | Accuracy: 0.9828
-
-run_epoch finished in 1.7040s
-Epoch 09 | Accuracy: 0.9851
-
-run_epoch finished in 1.6560s
-Epoch 10 | Accuracy: 0.9870
-
-run_epoch finished in 1.6870s
-Epoch 11 | Accuracy: 0.9884
-
-run_epoch finished in 1.6720s
-Epoch 12 | Accuracy: 0.9898
-
-run_epoch finished in 1.7030s
-Epoch 13 | Accuracy: 0.9910
-
-run_epoch finished in 1.7030s
-Epoch 14 | Accuracy: 0.9920
-
-run_epoch finished in 1.6870s
-Epoch 15 | Accuracy: 0.9930
-
-run_epoch finished in 1.7350s
-Epoch 16 | Accuracy: 0.9937
-
-run_epoch finished in 1.7340s
-Epoch 17 | Accuracy: 0.9946
-
-run_epoch finished in 1.6870s
-Epoch 18 | Accuracy: 0.9954
-
-run_epoch finished in 1.7040s
-Epoch 19 | Accuracy: 0.9963
-
-run_epoch finished in 1.7030s
-Epoch 20 | Accuracy: 0.9966
+Epoch: 01 | Accuracy: 0.8994 | Time: 1.6560s
+Epoch: 02 | Accuracy: 0.9448 | Time: 1.6560s
+Epoch: 03 | Accuracy: 0.9596 | Time: 1.6570s
+Epoch: 04 | Accuracy: 0.9678 | Time: 1.6870s
+Epoch: 05 | Accuracy: 0.9738 | Time: 1.6560s
+Epoch: 06 | Accuracy: 0.9772 | Time: 1.6560s
+Epoch: 07 | Accuracy: 0.9808 | Time: 1.6720s
+Epoch: 08 | Accuracy: 0.9828 | Time: 1.7500s
+Epoch: 09 | Accuracy: 0.9851 | Time: 1.7030s
+Epoch: 10 | Accuracy: 0.9870 | Time: 1.6880s
+Epoch: 11 | Accuracy: 0.9884 | Time: 1.6720s
+Epoch: 12 | Accuracy: 0.9898 | Time: 1.7180s
+Epoch: 13 | Accuracy: 0.9910 | Time: 1.7190s
+Epoch: 14 | Accuracy: 0.9920 | Time: 1.7030s
+Epoch: 15 | Accuracy: 0.9930 | Time: 1.7340s
+Epoch: 16 | Accuracy: 0.9937 | Time: 1.7030s
+Epoch: 17 | Accuracy: 0.9946 | Time: 1.7190s
+Epoch: 18 | Accuracy: 0.9954 | Time: 1.6090s
+Epoch: 19 | Accuracy: 0.9963 | Time: 1.6100s
+Epoch: 20 | Accuracy: 0.9966 | Time: 1.6870s
+Training time: 33.6550s
 
 Testing...
-
-run_epoch finished in 0.2190s
-Accuracy: 0.9809
+Accuracy: 0.9809 | Time: 0.2190
 </pre>
 </div>
 </div>
