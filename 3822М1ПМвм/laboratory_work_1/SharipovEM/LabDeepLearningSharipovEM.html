@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>391598</title>
+  <title>3e559fcd5b244865b44a5b306888ddc0</title>
   <style>
     html {
       line-height: 1.5;
@@ -29,6 +29,9 @@
       body {
         font-size: 0.9em;
         padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
       }
     }
     @media print {
@@ -134,15 +137,26 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -181,7 +195,7 @@
     code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
     code span.at { color: #7d9029; } /* Attribute */
     code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { } /* BuiltIn */
+    code span.bu { color: #008000; } /* BuiltIn */
     code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #4070a0; } /* Char */
     code span.cn { color: #880000; } /* Constant */
@@ -194,7 +208,7 @@
     code span.ex { } /* Extension */
     code span.fl { color: #40a070; } /* Float */
     code span.fu { color: #06287e; } /* Function */
-    code span.im { } /* Import */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
     code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
     code span.kw { color: #007020; font-weight: bold; } /* Keyword */
     code span.op { color: #666666; } /* Operator */
@@ -213,31 +227,39 @@
   <![endif]-->
 </head>
 <body>
-<section id="лабораторная-работа-по-курсу-глубокое-обучение" class="cell markdown">
-<h1>Лабораторная работа по курсу "Глубокое обучение"</h1>
-</section>
-<div class="cell code" data-execution_count="1">
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div id="5ef8beff" class="cell markdown">
+<h1 id="лабораторная-работа-по-курсу-глубокое-обучение">Лабораторная
+работа по курсу "Глубокое обучение"</h1>
+</div>
+<div id="c72322e3" class="cell code" data-execution_count="1">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> struct</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gzip</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span></code></pre></div>
 </div>
-<section id="считывание-данных" class="cell markdown">
-<h2>Считывание данных</h2>
-</section>
-<div class="cell markdown">
-<p>В данной работе используется набор данных MNIST. Данный набор был предварительно скачен с сайта [<a href="http://yann.lecun.com/exdb/mnist" class="uri">http://yann.lecun.com/exdb/mnist</a>].</p>
+<div id="19f4dcba" class="cell markdown">
+<h2 id="считывание-данных">Считывание данных</h2>
 </div>
-<div class="cell markdown">
+<div id="a94ab362" class="cell markdown">
+<p>В данной работе используется набор данных MNIST. Данный набор был
+предварительно скачен с сайта [<a
+href="http://yann.lecun.com/exdb/mnist"
+class="uri">http://yann.lecun.com/exdb/mnist</a>].</p>
+</div>
+<div id="d97a19ce" class="cell markdown">
 <ul>
-<li>train-images-idx3-ubyte.gz; train-labels-idx1-ubyte – обучающие данные и их метки.</li>
-<li>t10k-images-idx3-ubyte, t10k-labels-idx1-ubyte – тестовые данные и их метки.</li>
+<li>train-images-idx3-ubyte.gz; train-labels-idx1-ubyte – обучающие
+данные и их метки.</li>
+<li>t10k-images-idx3-ubyte, t10k-labels-idx1-ubyte – тестовые данные и
+их метки.</li>
 </ul>
 </div>
-<div class="cell code" data-execution_count="2">
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># функция, возвращающая разархивирующий файл с картинками </span></span>
+<div id="098ceb14" class="cell code" data-execution_count="2">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># функция, возвращающая разархивирующий файл с картинками </span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> readBinFileMatrix(nameFile):</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    pathFiles <span class="op">=</span> os.getcwd()</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> gzip.<span class="bu">open</span>(pathFiles <span class="op">+</span> <span class="st">&#39;/&#39;</span> <span class="op">+</span>  nameFile,<span class="st">&#39;rb&#39;</span>) <span class="im">as</span> f:</span>
@@ -268,11 +290,13 @@
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> nameData <span class="op">==</span> <span class="st">&#39;Ytest&#39;</span>:</span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> readBinFileLabel(<span class="st">&#39;t10k-labels-idx1-ubyte.gz&#39;</span>)  </span></code></pre></div>
 </div>
-<div class="cell markdown">
-<p>Загрузим тренировочные и тестовые данные. Выведем на экран размерность данных.</p>
+<div id="a6c786b8" class="cell markdown">
+<p>Загрузим тренировочные и тестовые данные. Выведем на экран
+размерность данных.</p>
 </div>
-<div class="cell code" data-execution_count="3">
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>train_x <span class="op">=</span> loadData(<span class="st">&#39;Xtrain&#39;</span>)</span>
+<div id="8a9de471" class="cell code" data-execution_count="3">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>train_x <span class="op">=</span> loadData(<span class="st">&#39;Xtrain&#39;</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>train_y<span class="op">=</span> loadData(<span class="st">&#39;Ytrain&#39;</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Shape X_train = </span><span class="sc">{}</span><span class="st">, Shape y_train = </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(train_x.shape, train_y.shape))</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -285,26 +309,30 @@ Shape X_test = (10000, 28, 28), Shape y_test = (10000,)
 </code></pre>
 </div>
 </div>
-<div class="cell markdown">
-<p>Проверм, что данные считались корректно. Для этого выведем на экран первую цифру и её метку класса.</p>
+<div id="02c0c140" class="cell markdown">
+<p>Проверм, что данные считались корректно. Для этого выведем на экран
+первую цифру и её метку класса.</p>
 </div>
-<div class="cell code" data-execution_count="4">
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(train_x[<span class="dv">0</span>,:,:], cmap<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
+<div id="a45d55a8" class="cell code" data-execution_count="4">
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(train_x[<span class="dv">0</span>,:,:], cmap<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Label: </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(train_y[<span class="dv">0</span>]))</span></code></pre></div>
 <div class="output display_data">
-<p><img src="3d305b46b7277cdc34b79a22a5221fca942a1dc1.png" /></p>
+<p><img
+src="vertopal_c63f84f49285477697fb594f7ff69bcf/3d305b46b7277cdc34b79a22a5221fca942a1dc1.png" /></p>
 </div>
 <div class="output stream stdout">
 <pre><code>Label: 5
 </code></pre>
 </div>
 </div>
-<section id="нормировка-данных" class="cell markdown">
-<h2>Нормировка данных</h2>
-</section>
-<div class="cell code" data-execution_count="5">
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>train_x <span class="op">=</span> train_x.reshape(</span>
+<div id="51c96fdf" class="cell markdown">
+<h2 id="нормировка-данных">Нормировка данных</h2>
+</div>
+<div id="c240b3bb" class="cell code">
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>train_x <span class="op">=</span> train_x.reshape(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    train_x.shape[<span class="dv">0</span>], train_x.shape[<span class="dv">1</span>]<span class="op">*</span>train_x.shape[<span class="dv">2</span>]).astype(<span class="st">&#39;float32&#39;</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>train_x <span class="op">=</span> train_x <span class="op">/</span> <span class="dv">255</span> </span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>train_y <span class="op">=</span> np.eye(<span class="dv">10</span>)[train_y] </span>
@@ -316,162 +344,229 @@ Shape X_test = (10000, 28, 28), Shape y_test = (10000,)
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>test_x <span class="op">=</span> test_x <span class="op">/</span> <span class="dv">255</span> </span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>test_y <span class="op">=</span> np.eye(<span class="dv">10</span>)[test_y]</span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Shape X_test = </span><span class="sc">{}</span><span class="st">, Shape y_test = </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(test_x.shape, test_y.shape))</span></code></pre></div>
-<div class="output stream stdout">
-<pre><code>Shape X_train = (60000, 784), Shape y_train = (60000, 10)
-Shape X_test = (10000, 784), Shape y_test = (10000, 10)
+<div class="output error" data-ename="" data-evalue="">
+<pre><code>Running cells with &#39;c:\Users\shari\AppData\Local\Programs\Python\Python310\python.exe&#39; requires the ipykernel package.
+
+Run the following command to install &#39;ipykernel&#39; into the Python environment. 
+
+Command: &#39;c:/Users/shari/AppData/Local/Programs/Python/Python310/python.exe -m pip install ipykernel -U --user --force-reinstall&#39;
 </code></pre>
 </div>
 </div>
-<section id="математическая-модель" class="cell markdown">
-<h2>Математическая модель</h2>
-</section>
-<div class="cell markdown">
+<div id="6a9fa3d9" class="cell markdown">
+<h2 id="математическая-модель">Математическая модель</h2>
+</div>
+<div id="ea1e1674" class="cell markdown">
 <p>Рассмотрим двухслойную нейронную сеть</p>
 </div>
-<div class="cell markdown">
-<p><a href="https://wampi.ru/image/RHEMg2t"><img src="https://ic.wampi.ru/2022/12/18/2022-12-15_20-15-21.md.png" alt="2022-12-15_20-15-21.md.png" /></a></p>
+<div id="6e83a26d" class="cell markdown">
+<p><a href="https://wampi.ru/image/RHEMg2t"><img
+src="https://ic.wampi.ru/2022/12/18/2022-12-15_20-15-21.md.png"
+alt="2022-12-15_20-15-21.md.png" /></a></p>
 </div>
-<div class="cell markdown">
+<div id="a5ffad8d" class="cell markdown">
 <p>где</p>
 <ul>
 <li>$  x_i$ - множество входных сигналов</li>
 <li>$  u_j$ - выход сети</li>
 <li>$  v_s$ - выходной сигнал нейрона скрытого слоя</li>
-<li>$  w_{si}^{(1)} $ и $  w_{js}^{(2)} $ - веса синаптических связей</li>
+<li>$  w_{si}^{(1)} $ и $  w_{js}^{(2)} $ - веса синаптических
+связей</li>
 </ul>
 </div>
-<div class="cell markdown">
+<div id="229bd089" class="cell markdown">
 <p>Модель нейрона описывается следующими уравнениями:</p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$ \ u_k=\sum_{j=1}^{n}w_{k,j}x_j$$</span></p>
+<div id="62f7ac66" class="cell markdown">
+<p><span class="math display">$$ \
+u_k=\sum_{j=1}^{n}w_{k,j}x_j$$</span></p>
 </div>
-<div class="cell markdown">
-<p><span class="math display"> <em>y</em><sub><em>k</em></sub> = <em>φ</em>(<em>u</em><sub><em>k</em></sub>+<em>b</em><sub><em>k</em></sub>)</span></p>
+<div id="2980febc" class="cell markdown">
+<p><span
+class="math display"> <em>y</em><sub><em>k</em></sub> = <em>φ</em>(<em>u</em><sub><em>k</em></sub>+<em>b</em><sub><em>k</em></sub>)</span></p>
 </div>
-<div class="cell markdown">
-<p>где <span class="math inline"> <em>x</em><sub><em>j</em></sub></span> - входной сигнал, $ w_{k,j} $ - синаптический вес сигнала <span class="math inline"> <em>x</em><sub><em>j</em></sub></span>, $ \varphi $ - функция активации, <span class="math inline"> <em>b</em><sub><em>k</em></sub></span> - смещение.</p>
+<div id="ab73fbfb" class="cell markdown">
+<p>где <span class="math inline"> <em>x</em><sub><em>j</em></sub></span>
+- входной сигнал, $ w_{k,j} $ - синаптический вес сигнала <span
+class="math inline"> <em>x</em><sub><em>j</em></sub></span>, $ \varphi $
+- функция активации, <span
+class="math inline"> <em>b</em><sub><em>k</em></sub></span> -
+смещение.</p>
 </div>
-<div class="cell markdown">
-<p>Метод обратного распространения ошибки определяет стратегию изменения параметров сети $ 𝑤 $ в ходе обучения с использованием градиентных методов оптимизации.</p>
+<div id="a93603f9" class="cell markdown">
+<p>Метод обратного распространения ошибки определяет стратегию изменения
+параметров сети $ 𝑤 $ в ходе обучения с использованием градиентных
+методов оптимизации.</p>
 </div>
-<div class="cell markdown">
-<p>Градиентные методы на каждом шаге уточняют значения параметров: <span class="math inline"> <em>w</em>(<em>k</em>+1) = <em>w</em>(<em>k</em>) + <em>η</em><em>p</em>(<em>w</em>)</span></p>
+<div id="156ce735" class="cell markdown">
+<p>Градиентные методы на каждом шаге уточняют значения параметров: <span
+class="math inline"> <em>w</em>(<em>k</em>+1) = <em>w</em>(<em>k</em>) + <em>η</em><em>p</em>(<em>w</em>)</span></p>
 </div>
-<div class="cell markdown">
+<div id="ad73c87a" class="cell markdown">
 <p>где</p>
 <ul>
-<li>$  \eta $ , $  0 &lt; \eta &lt; 1 $ – скорость обучения (learning rate) –«скорость» движения в направлении минимального значения функции</li>
-<li>$  𝑝(𝑤) $ – направление в многомерном пространстве параметров нейронной сети</li>
+<li>$  \eta $ , $  0 &lt; \eta &lt; 1 $ – скорость обучения (learning
+rate) –«скорость» движения в направлении минимального значения
+функции</li>
+<li>$  𝑝(𝑤) $ – направление в многомерном пространстве параметров
+нейронной сети</li>
 </ul>
 </div>
-<div class="cell markdown">
-<p>В классическом методе обратного распространения ошибки направление движения совпадает с направлением антиградиента $  𝑝(𝑤) = −\nabla 𝐸(𝑤(𝑘)) $ на 𝑘-ой итерации метода.</p>
+<div id="84e65f55" class="cell markdown">
+<p>В классическом методе обратного распространения ошибки направление
+движения совпадает с направлением антиградиента $  𝑝(𝑤) = −\nabla
+𝐸(𝑤(𝑘)) $ на 𝑘-ой итерации метода.</p>
 </div>
-<section id="метод-обратного-распространения-ошибки" class="cell markdown">
-<h3>Метод обратного распространения ошибки</h3>
-</section>
-<section id="1-прямой-проход" class="cell markdown">
-<h4>1. Прямой проход</h4>
-</section>
-<div class="cell markdown">
+<div id="b5703b9f" class="cell markdown">
+<h3 id="метод-обратного-распространения-ошибки">Метод обратного
+распространения ошибки</h3>
+</div>
+<div id="ec077725" class="cell markdown">
+<h4 id="1-прямой-проход">1. Прямой проход</h4>
+</div>
+<div id="ce502359" class="cell markdown">
 <ol>
 <li>Вычисление значений выходных сигналов нейронов всех слоев</li>
-<li>Вычисление значений производных функций активации на каждом слое сети</li>
+<li>Вычисление значений производных функций активации на каждом слое
+сети</li>
 </ol>
 </div>
-<div class="cell markdown">
-<p>Выходной сигнал нейрона скрытого слоя описывается следующим образом:</p>
+<div id="6e673f7d" class="cell markdown">
+<p>Выходной сигнал нейрона скрытого слоя описывается следующим
+образом:</p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$ \ v_s = \varphi ^{(1)} (\sum_{i=1}^{N}w_{si}^{(1)}x_i) $$</span></p>
+<div id="9cd097df" class="cell markdown">
+<p><span class="math display">$$ \ v_s = \varphi ^{(1)}
+(\sum_{i=1}^{N}w_{si}^{(1)}x_i) $$</span></p>
 </div>
-<div class="cell markdown">
+<div id="89b0d81a" class="cell markdown">
 <p>Сигнал 𝑗-ого нейрона выходного слоя:</p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$ \ u_j = \varphi ^{(2)}(\sum_{s=0}^{K}w_{js}^{(2)}v_s) = \varphi ^{(2)}(\sum_{s=0}^{K}w_{js}^{(2)}\varphi ^{(1)} (\sum_{i=0}^{N}w_{si}^{(1)}x_i)), \ j = 1,M $$</span></p>
+<div id="b90e5bd2" class="cell markdown">
+<p><span class="math display">$$ \ u_j = \varphi
+^{(2)}(\sum_{s=0}^{K}w_{js}^{(2)}v_s) = \varphi
+^{(2)}(\sum_{s=0}^{K}w_{js}^{(2)}\varphi ^{(1)}
+(\sum_{i=0}^{N}w_{si}^{(1)}x_i)), \ j = 1,M $$</span></p>
 </div>
-<div class="cell markdown">
-<p>В качестве функции активации на скрытом слое используется ReLU (Rectified Linear Unit).</p>
+<div id="e8c1a760" class="cell markdown">
+<p>В качестве функции активации на скрытом слое используется ReLU
+(Rectified Linear Unit).</p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$ \ \varphi(v) = \begin{cases} 0,v \leq 0 \\ v,v&gt;0 \end{cases}$$</span></p>
+<div id="bc001917" class="cell markdown">
+<p><span class="math display">$$ \ \varphi(v) = \begin{cases} 0,v \leq 0
+\\ v,v&gt;0 \end{cases}$$</span></p>
 </div>
-<div class="cell markdown">
-<p><a href="https://wampi.ru/image/RHEMDAg"><img src="https://im.wampi.ru/2022/12/18/2022-12-18_11-51-48.png" alt="2022-12-18_11-51-48.png" /></a></p>
+<div id="a7aa9105" class="cell markdown">
+<p><a href="https://wampi.ru/image/RHEMDAg"><img
+src="https://im.wampi.ru/2022/12/18/2022-12-18_11-51-48.png"
+alt="2022-12-18_11-51-48.png" /></a></p>
 </div>
-<div class="cell markdown">
+<div id="71c1946d" class="cell markdown">
 <p>Её производная есть</p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$ \ \varphi(v)^{'} = \begin{cases} 0,v \leq 0 \\ 1,v&gt;0 \end{cases}$$</span></p>
+<div id="9ac9bbc8" class="cell markdown">
+<p><span class="math display">$$ \ \varphi(v)^{'} = \begin{cases} 0,v
+\leq 0 \\ 1,v&gt;0 \end{cases}$$</span></p>
 </div>
-<div class="cell markdown">
-<p>В качестве функции активациии на выходном слое используется функция softmax.</p>
+<div id="082c6fcc" class="cell markdown">
+<p>В качестве функции активациии на выходном слое используется функция
+softmax.</p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$\ \varphi(u_j) = \frac{e^{u_j} }{\sum_{i=1}^{M} e^{u_i}} $$</span></p>
+<div id="cacfcb65" class="cell markdown">
+<p><span class="math display">$$\ \varphi(u_j) = \frac{e^{u_j}
+}{\sum_{i=1}^{M} e^{u_i}} $$</span></p>
 </div>
-<section id="2-обратный-проход" class="cell markdown">
-<h4>2. Обратный проход</h4>
-</section>
-<div class="cell markdown">
+<div id="4a13abd4" class="cell markdown">
+<h4 id="2-обратный-проход">2. Обратный проход</h4>
+</div>
+<div id="98507bdb" class="cell markdown">
 <ol>
-<li>Вычисление целевой функции 𝐸 и ее градиента $ \frac{\partial E }{\partial w_{js}^{(2)}} $ и <span class="math inline">$\ \frac{\partial E }{\partial w_{si}^{(1)}}$</span></li>
+<li>Вычисление целевой функции 𝐸 и ее градиента $ \frac{\partial E
+}{\partial w_{js}^{(2)}} $ и <span class="math inline">$\ \frac{\partial
+E }{\partial w_{si}^{(1)}}$</span></li>
 <li>Коррекция весов $ 𝑤(𝑘 + 1) = 𝑤(𝑘) − \eta \nabla 𝐸(𝑤(𝑘)) $</li>
 </ol>
 </div>
-<div class="cell markdown">
-<p>В качестве функции ошибки используется кросс-энтропия (или логарифмическая функция потерь – log loss), т.е.</p>
+<div id="846bf981" class="cell markdown">
+<p>В качестве функции ошибки используется кросс-энтропия (или
+логарифмическая функция потерь – log loss), т.е.</p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$\ E(w) = - \sum_{j=1}^{M}y_j ln(u_j) $$</span></p>
+<div id="9ef3bbae" class="cell markdown">
+<p><span class="math display">$$\ E(w) = - \sum_{j=1}^{M}y_j ln(u_j)
+$$</span></p>
 </div>
-<div class="cell markdown">
-<p>где <span class="math inline"> <em>y</em><sub><em>j</em></sub></span> ожидаемый выход (метки).</p>
+<div id="ecbd81bf" class="cell markdown">
+<p>где <span class="math inline"> <em>y</em><sub><em>j</em></sub></span>
+ожидаемый выход (метки).</p>
 </div>
-<div class="cell markdown">
-<p>Производную целевой функции по весам можно вывести следующим образом:</p>
+<div id="d791dbec" class="cell markdown">
+<p>Производную целевой функции по весам можно вывести следующим
+образом:</p>
 </div>
-<div class="cell markdown">
+<div id="56f89295" class="cell markdown">
 <p>По весам второго слоя:</p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$\ \frac{\partial E }{\partial w_{js}^{(2)}} = - \sum_{j'=0}^{M} y_{j'} \frac{\partial \ln u_{j'}}{\partial w_{js}^{(2)}} =   - \sum_{j'=0}^{M} y_{j'} \frac{1}{u_{j'}} \frac{\partial u_{j'}}{\partial w_{js}^{(2)}}$$</span></p>
+<div id="ea29cc3e" class="cell markdown">
+<p><span class="math display">$$\ \frac{\partial E }{\partial
+w_{js}^{(2)}} = - \sum_{j'=0}^{M} y_{j'} \frac{\partial \ln
+u_{j'}}{\partial w_{js}^{(2)}} =   - \sum_{j'=0}^{M} y_{j'}
+\frac{1}{u_{j'}} \frac{\partial u_{j'}}{\partial
+w_{js}^{(2)}}$$</span></p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$ \ \frac{\partial u_{j'}}{\partial w_{js}^{(2)}} = \frac{\partial \varphi ^{(2)} (g_{j'})}{\partial g_{j}} \frac{\partial g_{j}}{\partial w_{js}^{(2)}} = \varphi (g_{j'}) (\delta_{j,j'}-\varphi(g_i)) \frac{\partial g_j}{\partial w_{js}^{(2)}}$$</span></p>
+<div id="7c9ad94f" class="cell markdown">
+<p><span class="math display">$$ \ \frac{\partial u_{j'}}{\partial
+w_{js}^{(2)}} = \frac{\partial \varphi ^{(2)} (g_{j'})}{\partial g_{j}}
+\frac{\partial g_{j}}{\partial w_{js}^{(2)}} = \varphi (g_{j'})
+(\delta_{j,j'}-\varphi(g_i)) \frac{\partial g_j}{\partial
+w_{js}^{(2)}}$$</span></p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$ \ g_j = \sum_{s=0}^K w_{ij}^{(2)}v_s;  \frac{\partial g_j}{\partial w_{js}^{(2)}} = v_s$$</span></p>
+<div id="8c36be67" class="cell markdown">
+<p><span class="math display">$$ \ g_j = \sum_{s=0}^K
+w_{ij}^{(2)}v_s;  \frac{\partial g_j}{\partial w_{js}^{(2)}} =
+v_s$$</span></p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$\ \frac{\partial E }{\partial w_{js}^{(2)}} = - \sum_{j'=0}^{M} y_{j'} (\delta_{j,j'}-\varphi^{(2)}(g_i))v_s = (\varphi^{(2)}(g_j) \sum_{j'=0}^{M} y_{j'} - y_i )v_s $$</span></p>
+<div id="67b6fd71" class="cell markdown">
+<p><span class="math display">$$\ \frac{\partial E }{\partial
+w_{js}^{(2)}} = - \sum_{j'=0}^{M} y_{j'}
+(\delta_{j,j'}-\varphi^{(2)}(g_i))v_s = (\varphi^{(2)}(g_j)
+\sum_{j'=0}^{M} y_{j'} - y_i )v_s $$</span></p>
 </div>
-<div class="cell markdown">
+<div id="13fd89db" class="cell markdown">
 <p>из условия $  \sum_{j=1}^M y_j = 1$ получаем</p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$\ \frac{\partial E }{\partial w_{js}^{(2)}} = (\partial^{(2)}(g_j) - y_j)v_s $$</span></p>
+<div id="03dcb5ed" class="cell markdown">
+<p><span class="math display">$$\ \frac{\partial E }{\partial
+w_{js}^{(2)}} = (\partial^{(2)}(g_j) - y_j)v_s $$</span></p>
 </div>
-<div class="cell markdown">
+<div id="51237daf" class="cell markdown">
 <p>По весам первого слоя</p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$\ \frac{\partial E }{\partial w_{si}^{(1)}} = - \sum_{j'=0}^{M} y_{j'} \frac{\partial \ln u_{j'}}{\partial w_{si}^{(1)}} = - \sum_{j'=0}^{M} y_{j'}  \frac{1}{u_{j'}} \frac{\partial u_{j'}}{\partial w_{si}^{(1)}}$$</span></p>
+<div id="43dbdeb8" class="cell markdown">
+<p><span class="math display">$$\ \frac{\partial E }{\partial
+w_{si}^{(1)}} = - \sum_{j'=0}^{M} y_{j'} \frac{\partial \ln
+u_{j'}}{\partial w_{si}^{(1)}} = - \sum_{j'=0}^{M}
+y_{j'}  \frac{1}{u_{j'}} \frac{\partial u_{j'}}{\partial
+w_{si}^{(1)}}$$</span></p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$ \ \frac{\partial u_{j'}}{\partial w_{si}^{(1)}} = \frac{\partial \varphi ^{(2)} (g_{j'})}{\partial g_{j}} \frac{\partial g_{j}}{\partial w_{si}^{(1)}} = \varphi^{(2)} (g_{j'}) (\delta_{j',j}-\varphi^{(2)}(g_i)) w_{js}^{(2)} \frac{\partial \varphi_i^{(1)}}{\partial w_{si}^{(1)}}x_i$$</span></p>
+<div id="d7151570" class="cell markdown">
+<p><span class="math display">$$ \ \frac{\partial u_{j'}}{\partial
+w_{si}^{(1)}} = \frac{\partial \varphi ^{(2)} (g_{j'})}{\partial g_{j}}
+\frac{\partial g_{j}}{\partial w_{si}^{(1)}} = \varphi^{(2)} (g_{j'})
+(\delta_{j',j}-\varphi^{(2)}(g_i)) w_{js}^{(2)} \frac{\partial
+\varphi_i^{(1)}}{\partial w_{si}^{(1)}}x_i$$</span></p>
 </div>
-<div class="cell markdown">
-<p><span class="math display">$$\ \frac{\partial E }{\partial w_{si}^{(1)}} = (\sum_{j'=0}^M (y_{j'}-u_{j'})w_{j's}^{(2)})\frac{\partial \varphi_i^{(1)}}{\partial w_{si}^{(1)}}x_i $$</span></p>
+<div id="c254b446" class="cell markdown">
+<p><span class="math display">$$\ \frac{\partial E }{\partial
+w_{si}^{(1)}} = (\sum_{j'=0}^M
+(y_{j'}-u_{j'})w_{j's}^{(2)})\frac{\partial \varphi_i^{(1)}}{\partial
+w_{si}^{(1)}}x_i $$</span></p>
 </div>
-<section id="программная-реализация" class="cell markdown">
-<h2>Программная реализация</h2>
-</section>
-<div class="cell code" data-execution_count="6">
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># определение функции активации ReLU на скрытом слое</span></span>
+<div id="eaff0904" class="cell markdown">
+<h2 id="программная-реализация">Программная реализация</h2>
+</div>
+<div id="a5f1abe9" class="cell code" data-execution_count="6">
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># определение функции активации ReLU на скрытом слое</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ReLU(x):</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.maximum(x, <span class="dv">0</span>)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -494,11 +589,13 @@ Shape X_test = (10000, 784), Shape y_test = (10000, 10)
 <span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> accuracy(x1, x2):</span>
 <span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> np.mean(np.argmax(x1, axis<span class="op">=</span><span class="dv">1</span>) <span class="op">==</span> np.argmax(x2, axis<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div>
 </div>
-<div class="cell markdown">
-<p>Создадим класс NeuralNetwork, который будет содержать имплементацию основных методов нейронной сети</p>
+<div id="fc28e0ef" class="cell markdown">
+<p>Создадим класс NeuralNetwork, который будет содержать имплементацию
+основных методов нейронной сети</p>
 </div>
-<div class="cell code" data-execution_count="11">
-<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> NeuralNetwork(<span class="bu">object</span>):</span>
+<div id="bc0a437b" class="cell code" data-execution_count="11">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> NeuralNetwork(<span class="bu">object</span>):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Объявление конструктора</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, input_layer<span class="op">=</span><span class="dv">28</span> <span class="op">*</span> <span class="dv">28</span>, hidden_layer<span class="op">=</span><span class="dv">300</span>, output_layer<span class="op">=</span><span class="dv">10</span>):</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># инициализация</span></span>
@@ -581,12 +678,14 @@ Shape X_test = (10000, 784), Shape y_test = (10000, 10)
 <span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&#39;Loss = </span><span class="sc">{}</span><span class="st">; Accuracy = </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(crossEntropyValue, accuracyValue))</span>
 <span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&quot;Total test time: </span><span class="sc">{</span>time<span class="sc">.</span>time() <span class="op">-</span> all_time<span class="sc">}</span><span class="ss"> sec&quot;</span>)</span></code></pre></div>
 </div>
-<div class="cell code" data-execution_count="12">
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Создание объекта разработанного класса</span></span>
+<div id="90ea5a14" class="cell code" data-execution_count="12">
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Создание объекта разработанного класса</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork()</span></code></pre></div>
 </div>
-<div class="cell code" data-execution_count="13">
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Обучение модели на 10 эпохах, скоростью обучения 0.1, размером пакета 16</span></span>
+<div id="e7166b02" class="cell code" data-execution_count="13">
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Обучение модели на 10 эпохах, скоростью обучения 0.1, размером пакета 16</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>network.train(train_x, train_y, num_epochs<span class="op">=</span><span class="dv">10</span>, l_rate<span class="op">=</span><span class="fl">0.1</span>, batch_size<span class="op">=</span><span class="dv">16</span>)</span></code></pre></div>
 <div class="output stream stdout">
 <pre><code>Train ...
@@ -604,8 +703,9 @@ Total train time: 227.006 sec
 </code></pre>
 </div>
 </div>
-<div class="cell code" data-execution_count="14">
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># тестирование модели</span></span>
+<div id="5707fa28" class="cell code" data-execution_count="14">
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># тестирование модели</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>network.test(test_x, test_y)</span></code></pre></div>
 <div class="output stream stdout">
 <pre><code>Test ...
@@ -614,11 +714,12 @@ Total test time: 0.17752361297607422 sec
 </code></pre>
 </div>
 </div>
-<div class="cell markdown">
+<div id="c85467be" class="cell markdown">
 <p>"Поиграемся" с параметрами модели</p>
 </div>
-<div class="cell code" data-execution_count="15">
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork()</span>
+<div id="c15c04f2" class="cell code" data-execution_count="15">
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork()</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Обучение модели на 10 эпохах, скоростью обучения 0.1, размером пакета 64</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>network.train(train_x, train_y, num_epochs<span class="op">=</span><span class="dv">10</span>, l_rate<span class="op">=</span><span class="fl">0.1</span>, batch_size<span class="op">=</span><span class="dv">64</span>)</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>network.test(test_x, test_y)</span></code></pre></div>
@@ -641,8 +742,9 @@ Total test time: 0.26427483558654785 sec
 </code></pre>
 </div>
 </div>
-<div class="cell code" data-execution_count="16">
-<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork(input_layer<span class="op">=</span><span class="dv">28</span> <span class="op">*</span> <span class="dv">28</span>, hidden_layer<span class="op">=</span><span class="dv">100</span>, output_layer<span class="op">=</span><span class="dv">10</span>)</span>
+<div id="60ebc5ad" class="cell code" data-execution_count="16">
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork(input_layer<span class="op">=</span><span class="dv">28</span> <span class="op">*</span> <span class="dv">28</span>, hidden_layer<span class="op">=</span><span class="dv">100</span>, output_layer<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Обучение модели на 10 эпохах, скоростью обучения 0.1, размером пакета 16</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>network.train(train_x, train_y, num_epochs<span class="op">=</span><span class="dv">10</span>, l_rate<span class="op">=</span><span class="fl">0.1</span>, batch_size<span class="op">=</span><span class="dv">64</span>)</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>network.test(test_x, test_y)</span></code></pre></div>
@@ -665,14 +767,17 @@ Total test time: 0.1356368064880371 sec
 </code></pre>
 </div>
 </div>
-<section id="контрольный-набор-данных" class="cell markdown">
-<h2>Контрольный набор данных</h2>
-</section>
-<div class="cell markdown">
-<p>Запустим нашу модель на контрольном наборе параметров: размер пачки 64, скорость обучения составляет 0.1, количество скрытых нейронов – 300, количество эпох – 20.</p>
+<div id="4b620807" class="cell markdown">
+<h2 id="контрольный-набор-данных">Контрольный набор данных</h2>
 </div>
-<div class="cell code" data-execution_count="17">
-<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork(input_layer<span class="op">=</span><span class="dv">28</span> <span class="op">*</span> <span class="dv">28</span>, hidden_layer<span class="op">=</span><span class="dv">300</span>, output_layer<span class="op">=</span><span class="dv">10</span>)</span>
+<div id="f5e5df4d" class="cell markdown">
+<p>Запустим нашу модель на контрольном наборе параметров: размер пачки
+64, скорость обучения составляет 0.1, количество скрытых нейронов – 300,
+количество эпох – 20.</p>
+</div>
+<div id="f7a966a9" class="cell code" data-execution_count="17">
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>network <span class="op">=</span> NeuralNetwork(input_layer<span class="op">=</span><span class="dv">28</span> <span class="op">*</span> <span class="dv">28</span>, hidden_layer<span class="op">=</span><span class="dv">300</span>, output_layer<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>network.train(train_x, train_y, num_epochs<span class="op">=</span><span class="dv">20</span>, l_rate<span class="op">=</span><span class="fl">0.1</span>, batch_size<span class="op">=</span><span class="dv">64</span>)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>network.test(test_x, test_y)</span></code></pre></div>
 <div class="output stream stdout">
@@ -704,17 +809,20 @@ Total test time: 0.2722773551940918 sec
 </code></pre>
 </div>
 </div>
-<section id="реализация-pytorch" class="cell markdown">
-<h2>Реализация PyTorch</h2>
-</section>
-<div class="cell markdown">
-<p>Проверм, достигнута ли точность классификации на тестовых данных для контрольных значений параметров, сравнимая с точностью, которую выдают стандартные инструменты глубокого обучения.</p>
+<div id="4568cbd1" class="cell markdown">
+<h2 id="реализация-pytorch">Реализация PyTorch</h2>
 </div>
-<div class="cell markdown">
+<div id="8a6ecb07" class="cell markdown">
+<p>Проверм, достигнута ли точность классификации на тестовых данных для
+контрольных значений параметров, сравнимая с точностью, которую выдают
+стандартные инструменты глубокого обучения.</p>
+</div>
+<div id="906285f9" class="cell markdown">
 <p>Для этого напишем воспользуемся PyTorch.</p>
 </div>
-<div class="cell code" data-execution_count="18">
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<div id="4926270c" class="cell code" data-execution_count="18">
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torchvision</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torchvision.datasets</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torchvision.transforms</span>
@@ -729,8 +837,9 @@ Total test time: 0.2722773551940918 sec
 </code></pre>
 </div>
 </div>
-<div class="cell code" data-execution_count="19">
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>input_size <span class="op">=</span> <span class="dv">28</span><span class="op">*</span><span class="dv">28</span></span>
+<div id="f42e9fe2" class="cell code" data-execution_count="19">
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>input_size <span class="op">=</span> <span class="dv">28</span><span class="op">*</span><span class="dv">28</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>hidden_size <span class="op">=</span> <span class="dv">300</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>output_size <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>batch_size <span class="op">=</span> <span class="dv">64</span></span>
@@ -769,8 +878,43 @@ Total test time: 0.2722773551940918 sec
 </code></pre>
 </div>
 </div>
-<div class="cell code" data-execution_count="21">
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>train(nn_model, train_x, train_y, loss_func, optimizer, <span class="dv">64</span>, <span class="dv">20</span>)</span></code></pre></div>
+<div id="3bb2d636" class="cell code">
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train(model, train_x, train_y, loss_func, optimizer, batch_size, num_epochs):</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>      all_time <span class="op">=</span> time.time()</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(num_epochs):</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>            epoch_time_start <span class="op">=</span> time.time()</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>            iteration <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> iteration <span class="op">&lt;</span> <span class="bu">len</span>(train_x):</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>                  X_train_batch <span class="op">=</span> torch.tensor(train_x[iteration:iteration<span class="op">+</span>batch_size])</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>                  y_train_batch <span class="op">=</span> torch.tensor(train_y[iteration:iteration<span class="op">+</span>batch_size])</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>                  <span class="co"># Прямой проход</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>                  net_out <span class="op">=</span> model(X_train_batch) <span class="co"># вычисление выхода сети</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>                  loss <span class="op">=</span> loss_func(net_out, y_train_batch) <span class="co"># вычисление функции ошибки</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>                  <span class="co"># Обратный проход</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>                  optimizer.zero_grad() <span class="co"># обнуление всех вычисляемых градиентов</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>                  loss.backward() <span class="co"># вычисление градиента функции ошибки</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>                  optimizer.step() <span class="co"># обновление параметров модели</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>                  iteration <span class="op">+=</span> batch_size</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>            epoch_time <span class="op">=</span> time.time()</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>            accuracy_train <span class="op">=</span> accuracy(model(torch.tensor(train_x)).detach().numpy(), train_y)</span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">&#39;Epoch: </span><span class="sc">{}</span><span class="st">; Time: </span><span class="sc">{}</span><span class="st">; Accuracy: </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(epoch, epoch_time <span class="op">-</span> epoch_time_start, accuracy_train))</span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="ss">f&quot;Total train time: </span><span class="sc">{</span>(time.time()<span class="op">-</span>all_time)<span class="sc">:.3f}</span><span class="ss"> sec&quot;</span>)</span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test(model, test_x, test_y):</span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;Test ...&quot;</span>)</span>
+<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a>      all_time <span class="op">=</span> time.time()</span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>      accuracy_test <span class="op">=</span> accuracy(model(torch.tensor(test_x)).detach().numpy(), test_y)</span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&#39;Accuracy test: </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(accuracy_test))</span>
+<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="ss">f&quot;Total test time: </span><span class="sc">{</span>time<span class="sc">.</span>time() <span class="op">-</span> all_time<span class="sc">}</span><span class="ss"> sec&quot;</span>)</span></code></pre></div>
+</div>
+<div id="ba621bed" class="cell code" data-execution_count="21">
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>train(nn_model, train_x, train_y, loss_func, optimizer, <span class="dv">64</span>, <span class="dv">20</span>)</span></code></pre></div>
 <div class="output stream stdout">
 <pre><code>Epoch: 0; Time: 2.380633592605591, Loss: 2.2841494977474213; Accuracy: 0.72665
 Epoch: 1; Time: 3.4866771697998047, Loss: 2.147377446293831; Accuracy: 0.7202
@@ -796,17 +940,21 @@ Total train time: 75.773 sec
 </code></pre>
 </div>
 </div>
-<div class="cell code" data-execution_count="22">
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>test(nn_model, train_x, train_y)</span></code></pre></div>
-<div class="output stream stdout">
-<pre><code>Test ...
-Accuracy test: 0.8347166666666667
-Total test time: 0.3131601810455322 sec
+<div id="3d842352" class="cell code">
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>test(nn_model, train_x, train_y)</span></code></pre></div>
+<div class="output error" data-ename="" data-evalue="">
+<pre><code>Running cells with &#39;c:\Users\shari\AppData\Local\Programs\Python\Python310\python.exe&#39; requires the ipykernel package.
+
+Run the following command to install &#39;ipykernel&#39; into the Python environment. 
+
+Command: &#39;c:/Users/shari/AppData/Local/Programs/Python/Python310/python.exe -m pip install ipykernel -U --user --force-reinstall&#39;
 </code></pre>
 </div>
 </div>
-<div class="cell code">
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+<div id="a9db01e6" class="cell code">
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode python"><code class="sourceCode python"></code></pre></div>
 </div>
 </body>
 </html>
