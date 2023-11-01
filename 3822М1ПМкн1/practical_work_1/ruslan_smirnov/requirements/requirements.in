@@ -1,0 +1,8 @@
+graphviz
+ipywidgets
+matplotlib
+notebook
+torch
+torchview
+torchvision
+tqdm
