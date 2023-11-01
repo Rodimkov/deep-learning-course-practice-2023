@@ -1,0 +1,15 @@
+[Net_2] 
+	 Net(
+	 (conv1): Conv2d(3, 20, kernel_size=(3, 3), stride=(1, 1))
+	 (conv2): Conv2d(20, 10, kernel_size=(3, 3), stride=(1, 1))
+	 (activation): ReLU()
+	 (pooling): MaxPool2d(kernel_size=2, stride=1, padding=0, dilation=1, ceil_mode=False)
+	 (fc1): Linear(in_features=7290, out_features=128, bias=True)
+	 (fc2): Linear(in_features=128, out_features=64, bias=True)
+	 (fc3): Linear(in_features=64, out_features=10, bias=True)
+	 ) 
+	 valid training loss: 1.29799 
+	 valid training accuracy 0.54899997 
+	 min validation loss: 1.33723, 
+	 best validation accuracy: 0.52630001, 
+	 time: 150.01984882354736

@@ -1,0 +1,19 @@
+[Net_5] 
+	 Net(
+  (conv1): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv2): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool1): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (conv3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool2): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (conv4): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv5): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (relu): ReLU()
+  (fc1): Linear(in_features=16384, out_features=32, bias=True)
+  (fc2): Linear(in_features=32, out_features=16, bias=True)
+  (fc3): Linear(in_features=16, out_features=10, bias=True)
+) 
+	 valid training loss: 0.58897 
+	 valid training accuracy 0.83784997 
+	 min validation loss: 0.87622, 
+	 best validation accuracy: 0.71129996, 
+	 time: 185.50805592536926

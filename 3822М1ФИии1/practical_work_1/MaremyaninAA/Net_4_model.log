@@ -1,0 +1,15 @@
+[Net_4] 
+	 Net(
+  (conv1): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv2): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (relu): ReLU()
+  (fc1): Linear(in_features=65536, out_features=32, bias=True)
+  (fc2): Linear(in_features=32, out_features=16, bias=True)
+  (fc3): Linear(in_features=16, out_features=10, bias=True)
+) 
+	 valid training loss: 0.87407 
+	 valid training accuracy 0.72962499 
+	 min validation loss: 1.25359, 
+	 best validation accuracy: 0.57359999, 
+	 time: 131.8309199810028
