@@ -1,22 +1,22 @@
 "ResNet18
  Special for CIFAR10",0.91
+"Vision Transformer B32
+4 epochs",0.9411
+"Vision Transformer B32
+Deep classifier
+6 epochs",0.9439
+"MobileNetV3 S
+4 epochs",0.8148
 "MobileNetV3 S
 Deep classifier
-9 epochs",0.8434
-"MobileNetV3 S
-5 epochs",0.8186
+6 epochs",0.8362
+"MNASNet 0.5
+4 epochs",0.6551
 "MNASNet 0.5
 Deep classifier
-9 epochs",0.6357
-"MNASNet 0.5
-5 epochs",0.6466
+6 epochs",0.6382
+"ResNet18
+4 epochs",0.769
 "ResNet18
 Deep classifier
-9 epochs",0.7755
-"ResNet18
-5 epochs",0.7711
-"EfficientNetV2 S
-Deep classifier
-9 epochs",0.7608
-"EfficientNetV2 S
-5 epochs",0.7424
+6 epochs",0.7772
