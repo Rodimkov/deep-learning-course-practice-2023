@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>prac_sec</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>prac_sec_res</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14578,7 +14578,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
@@ -14602,7 +14602,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">"cuda:0"</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">"cpu"</span><span class="p">)</span>
@@ -14644,7 +14644,7 @@ Device: Tesla T4
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lrate</span> <span class="o">=</span> <span class="mf">0.001</span>
@@ -14670,7 +14670,7 @@ Device: Tesla T4
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_accuracy</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">data_loader</span><span class="p">):</span>
@@ -14696,7 +14696,7 @@ Device: Tesla T4
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Worker</span><span class="p">():</span>
@@ -14746,7 +14746,7 @@ Device: Tesla T4
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">start_one</span><span class="p">(</span><span class="n">wrk</span><span class="p">):</span>
@@ -14762,6 +14762,12 @@ Device: Tesla T4
         <span class="n">features_count</span> <span class="o">=</span> <span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">classifier</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">in_features</span>
         <span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">classifier</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">features_count</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
         <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">classifier</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">lrate</span><span class="p">)</span>
+        <span class="n">wrk</span><span class="o">.</span><span class="n">train_and_test</span><span class="p">(</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">loss_function</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="n">wrk</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">"vit_b_16"</span><span class="p">:</span>
+        <span class="n">features_count</span> <span class="o">=</span> <span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">heads</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">in_features</span>
+        <span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">heads</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">features_count</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">features_count</span><span class="p">)</span>
+        <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">heads</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">lrate</span><span class="p">)</span>
         <span class="n">wrk</span><span class="o">.</span><span class="n">train_and_test</span><span class="p">(</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">loss_function</span> <span class="p">)</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
@@ -14789,6 +14795,16 @@ Device: Tesla T4
         <span class="nb">print</span><span class="p">(</span><span class="n">features_count</span><span class="p">)</span>
         <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fc</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">lrate</span><span class="p">)</span>
         <span class="n">wrk</span><span class="o">.</span><span class="n">train_and_test</span><span class="p">(</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">loss_function</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="n">wrk</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">"vit_b_16"</span><span class="p">:</span>
+        <span class="n">features_count</span> <span class="o">=</span> <span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">heads</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">in_features</span>
+        <span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">heads</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">features_count</span><span class="p">,</span> <span class="n">features_count</span><span class="o">//</span><span class="mi">2</span><span class="p">),</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">features_count</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">features_count</span><span class="p">)</span>
+        <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">heads</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">lrate</span><span class="p">)</span>
+        <span class="n">wrk</span><span class="o">.</span><span class="n">train_and_test</span><span class="p">(</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">loss_function</span> <span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">wrk</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">start_three</span><span class="p">(</span><span class="n">wrk</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">wrk</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
@@ -14807,7 +14823,7 @@ Device: Tesla T4
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">worker_resnet18</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span><span class="s2">"resnet18"</span><span class="p">,</span> <span class="s2">"ResNet18_Weights.IMAGENET1K_V1"</span><span class="p">,</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">ResNet18_Weights</span><span class="o">.</span><span class="n">IMAGENET1K_V1</span><span class="o">.</span><span class="n">transforms</span><span class="p">())</span>
@@ -15047,7 +15063,7 @@ resnet18_deep
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">worker_mibilenet</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span><span class="s2">"mobilenet_v3_small"</span><span class="p">,</span> <span class="s2">"MobileNet_V3_Small_Weights.IMAGENET1K_V1"</span><span class="p">,</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">MobileNet_V3_Small_Weights</span><span class="o">.</span><span class="n">IMAGENET1K_V1</span><span class="o">.</span><span class="n">transforms</span><span class="p">())</span>
@@ -15692,7 +15708,7 @@ mobilenet_v3_small_full
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">worker_googlenet</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span><span class="s2">"googlenet"</span><span class="p">,</span><span class="s2">"GoogLeNet_Weights.IMAGENET1K_V1"</span><span class="p">,</span><span class="n">torchvision</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">GoogLeNet_Weights</span><span class="o">.</span><span class="n">IMAGENET1K_V1</span><span class="o">.</span><span class="n">transforms</span><span class="p">())</span>
@@ -16423,7 +16439,7 @@ googlenet_full
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">worker_resnet50</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span><span class="s2">"resnet50"</span><span class="p">,</span> <span class="s2">"ResNet50_Weights.IMAGENET1K_V2"</span><span class="p">,</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">ResNet50_Weights</span><span class="o">.</span><span class="n">IMAGENET1K_V2</span><span class="o">.</span><span class="n">transforms</span><span class="p">())</span>
@@ -16871,7 +16887,7 @@ mobilenet_v3_small_deep
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plot</span>
@@ -16896,7 +16912,7 @@ mobilenet_v3_small_deep
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16928,20 +16944,599 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">worker_vit</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span><span class="s2">"vit_b_16"</span><span class="p">,</span> <span class="s2">"ViT_B_16_Weights.DEFAULT"</span><span class="p">,</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">ViT_B_16_Weights</span><span class="o">.</span><span class="n">DEFAULT</span><span class="o">.</span><span class="n">transforms</span><span class="p">())</span>
+<span class="n">start_two</span><span class="p">(</span><span class="n">worker_vit</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to /content/cifar-10-python.tar.gz
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>100%|██████████| 170498071/170498071 [00:12&lt;00:00, 13278006.53it/s]
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Extracting /content/cifar-10-python.tar.gz to /content
+Files already downloaded and verified
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Downloading: &#34;https://download.pytorch.org/models/vit_b_16-c867db91.pth&#34; to /root/.cache/torch/hub/checkpoints/vit_b_16-c867db91.pth
+100%|██████████| 330M/330M [00:05&lt;00:00, 65.5MB/s]
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>vit_b_16
+768
+Epoch[0]: acc = 0.9603999853134155, time = 592.4060637950897
+Epoch[1]: acc = 0.9706199765205383, time = 592.0329320430756
+Epoch[2]: acc = 0.9794999957084656, time = 591.5894939899445
+Epoch[3]: acc = 0.9865599870681763, time = 591.6757760047913
+Epoch[4]: acc = 0.987339973449707, time = 590.2111518383026
+Time:  {5924.538775444031}
+Test acc: 0.9505999684333801
+VisionTransformer(
+  (conv_proj): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+  (encoder): Encoder(
+    (dropout): Dropout(p=0.0, inplace=False)
+    (layers): Sequential(
+      (encoder_layer_0): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_1): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_2): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_3): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_4): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_5): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_6): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_7): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_8): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_9): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_10): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_11): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+    )
+    (ln): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+  )
+  (heads): Sequential(
+    (0): Linear(in_features=768, out_features=384, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=384, out_features=10, bias=True)
+  )
+)
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">worker_vit_sec</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span><span class="s2">"vit_b_16"</span><span class="p">,</span> <span class="s2">"ViT_B_16_Weights.DEFAULT"</span><span class="p">,</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">ViT_B_16_Weights</span><span class="o">.</span><span class="n">DEFAULT</span><span class="o">.</span><span class="n">transforms</span><span class="p">())</span>
+<span class="n">start_one</span><span class="p">(</span><span class="n">worker_vit_sec</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Files already downloaded and verified
+Files already downloaded and verified
+vit_b_16
+768
+Epoch[0]: acc = 0.9480199813842773, time = 590.2733819484711
+Epoch[1]: acc = 0.9548199772834778, time = 588.7941012382507
+Epoch[2]: acc = 0.9598599672317505, time = 590.2820425033569
+Epoch[3]: acc = 0.9627400040626526, time = 591.1582546234131
+Epoch[4]: acc = 0.9645799994468689, time = 590.2547073364258
+Time:  {5911.526317358017}
+Test acc: 0.9490000009536743
+VisionTransformer(
+  (conv_proj): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+  (encoder): Encoder(
+    (dropout): Dropout(p=0.0, inplace=False)
+    (layers): Sequential(
+      (encoder_layer_0): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_1): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_2): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_3): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_4): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_5): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_6): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_7): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_8): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_9): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_10): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+      (encoder_layer_11): EncoderBlock(
+        (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (self_attention): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+        )
+        (dropout): Dropout(p=0.0, inplace=False)
+        (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (mlp): MLPBlock(
+          (0): Linear(in_features=768, out_features=3072, bias=True)
+          (1): GELU(approximate=&#39;none&#39;)
+          (2): Dropout(p=0.0, inplace=False)
+          (3): Linear(in_features=3072, out_features=768, bias=True)
+          (4): Dropout(p=0.0, inplace=False)
+        )
+      )
+    )
+    (ln): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+  )
+  (heads): Linear(in_features=768, out_features=10, bias=True)
+)
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plot</span>
+<span class="n">result_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"resnet18_deep"</span><span class="p">,</span> <span class="s2">"resnet18_one"</span><span class="p">,</span><span class="s2">"mobilenet_v3_small_one"</span><span class="p">,</span><span class="s2">"mobilenet_v3_small_full"</span><span class="p">,</span> <span class="s2">"googlenet_one"</span><span class="p">,</span> <span class="s2">"googlenet_full"</span><span class="p">,</span> <span class="s2">"resnet50_one"</span><span class="p">,</span> <span class="s2">"resnet50_deep"</span><span class="p">,</span> <span class="s2">"vit_b_16_deep"</span><span class="p">,</span> <span class="s2">"vit_b_16_one"</span> <span class="p">]</span>
+<span class="n">result_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.7796</span><span class="p">,</span> <span class="mf">0.7782</span><span class="p">,</span> <span class="mf">0.8111</span><span class="p">,</span> <span class="mf">0.6318</span><span class="p">,</span> <span class="mf">0.7548</span><span class="p">,</span> <span class="mf">0.8115</span><span class="p">,</span> <span class="mf">0.8072</span><span class="p">,</span> <span class="mf">0.8037</span><span class="p">,</span> <span class="mf">0.95059</span><span class="p">,</span> <span class="mf">0.9490</span><span class="p">]</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">result_names</span><span class="p">,</span> <span class="n">result_values</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;BarContainer object of 10 artists&gt;</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB3cAAAMtCAYAAACM//sFAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjcuMSwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/bCgiHAAAACXBIWXMAAA9hAAAPYQGoP6dpAABQOklEQVR4nOzde5yVdb3o8S8MMNxBbgMiMalxsVQUkzNSm9qicOqY2N5pSopImAlbivRlpILmVnSrbCop0h142d6OirULI5Vg50YRBPGSCIISmIIiIoIKMvM7f3hYuuQ2g+jwg/f79ZrXi/Ws51nPb635retn1kOdlFIKAAAAAAAAAPZodWt7AAAAAAAAAADsnLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMlCvtgdQHVVVVfHyyy9Hs2bNok6dOrU9HAAAAAAAAIDdJqUUb731Vuy///5Rt+72v5+bRdx9+eWXo1OnTrU9DAAAAAAAAIBPzIoVK+KAAw7Y7vlZxN1mzZpFxPtXpnnz5rU8GgAAAAAAAIDdZ926ddGpU6dCF92eLOLulkMxN2/eXNwFAAAAAAAA9ko7+y9qt3/AZgAAAAAAAAD2GOIuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbq1fYAAAAAAABgb1f+46m1PQQysOyqr9f2EIA9nLgLAAAAAABAgT9GoDr8MULtcFhmAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA3AUAAAAAAADIgLgLAAAAAAAAkAFxFwAAAAAAACAD4i4AAAAAAABABsRdAAAAAAAAgAyIuwAAAAAAAAAZEHcBAAAAAAAAMiDuAgAAAAAAAGRA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A+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAZ2Ke5OmDAhysvLo2HDhtGrV6+YM2dOtba78847o06dOjFgwIBd2S0AAAAAAADAPqvGcfeuu+6KkSNHxpgxY2L+/Plx+OGHR79+/eLVV1/d4XbLli2L888/P7785S/v8mABAAAAAAAA9lU1jrvjxo2LoUOHxuDBg+OQQw6JiRMnRuPGjWPSpEnb3aaysjIGDhwYl112WRx44IEfa8AAAAAAAAAA+6Iaxd1NmzbFvHnzom/fvh9cQN260bdv33j00Ue3u91Pf/rTaNeuXQwZMqRa+9m4cWOsW7eu6AcAAAAAAABgX1ajuLt69eqorKyMsrKyouVlZWWxcuXKbW7zP//zP/Gb3/wmbrzxxmrvZ+zYsdGiRYvCT6dOnWoyTAAAAAAAAIC9To0Py1wTb731Vpx++ulx4403Rps2baq93ahRo+LNN98s/KxYseITHCUAAAAAAADAnq9eTVZu06ZNlJSUxKpVq4qWr1q1Ktq3b7/V+kuXLo1ly5bFCSecUFhWVVX1/o7r1YtFixbFQQcdtNV2paWlUVpaWpOhAQAAAAAAAOzVavTN3QYNGkTPnj1j+vTphWVVVVUxffr0qKio2Gr9bt26xdNPPx0LFiwo/HzjG9+Ir371q7FgwQKHWwYAAAAAAACophp9czciYuTIkTFo0KA46qij4uijj47x48fHhg0bYvDgwRERccYZZ0THjh1j7Nix0bBhw/jCF75QtH3Lli0jIrZaDgAAAAAAAMD21TjunnLKKfHaa6/F6NGjY+XKldGjR4+YNm1alJWVRUTE8uXLo27dT/S/8gUAAAAAAADY59Q47kZEDB8+PIYPH77N82bOnLnDbW+66aZd2SUAAAAAAADAPs1XbAEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAAAAAAZEDcBQAAAAAAAMiAuAsAAAAAAACQAXEXAAAAAAAAIAPiLgAAAAAAAEAGxF0AAAAAAACADIi7AAAAAAAAABkQdwEAAAAAAAAyIO4CAAAA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cRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAgA+IuAAAAAAAAQAbEXQAAAAAAAIAMiLsAAAAAAAAAGRB3AQAAAAAAADIg7gIAAAAAAABkQNwFAAAAAAAAyIC4CwAAAAAAAJABcRcAAAAAAAAg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uj0ee+yx1KNHj1RaWpp69uyZpkyZstW+dnb7VFZWpiuvvDKVl5enhg0bpsMOOyzdfffdhfO3XMc//OEP6dBDD02lpaWpV69e6emnn67WGClmDhd76qmn0le/+tXCdRs6dGh66623Cud/3OuXiz59+qThw4enESNGpJYtW6Z27dqlG264Ia1fvz6deeaZqWnTpumggw5K999/f2GbmTNnpi9+8YupQYMGqX379unCCy9M7733XtFlDhs2LA0bNiw1b948tW7dOl188cWpqqqqsE7nzp3Tv//7vxdOR0S67777CqeXL1+evvWtb6UWLVqk/fbbL33jG99IL774YuH8T2P+fdSoUaPS0UcfvdXyww47LF122WXb3e6II45IF1988Q4ve4sJEyakgw8+OJWWlqZ27dqlf/qnfyqctyu/q82bN6ezzjqr8DjbpUuXNH78+KJ9brktP7yfESNGVGu8a9asSaeffnpq2bJlatSoUerfv39avHhx4fzJkyenFi1apGnTpqVu3bqlJk2apH79+qWXX3656HJuvPHG1K1bt1RaWpq6du2aJkyYsNN9m7vm7q7O3T59+hTdfn369Ekpbf27TCmlFi1apMmTJ6eUtn5O2vK7eOONN6p1G9W2devWpdNOOy01btw4tW/fPo0bN67oNtvZ/TmllO655550yCGHpAYNGqTOnTuna6+9tuj8l19+OX3ta19LDRs2TOXl5em2227L8j5Tndvjk3x8o5i5W/25u68+vu2Jcnrv9dHn04969tlnU0SkuXPnFpb98Y9/THXq1El///vfq3V77Ow+2Llz53TFFVekwYMHp6ZNm6ZOnTqlX//610Xr7Ow+R/WZn8UmT56cOnXqlBo1apQGDBiQrr322tSiRYuidX7729+mI444IpWWlqbPfvaz6dJLLy16H/HGG2+kIUOGpDZt2qRmzZqlr371q2nBggWF88eMGZMOP/zwNHHixHTAAQekRo0apW9961tp7dq11Rrjvu7Xv/516tChQ6qsrCxa/o1vfCMNHjy4cPum9P5t/dH5tLPPabY8D95xxx2poqIilZaWps9//vNp5syZNR7rh8fyYc8++2yqV69eeu6552p8mVuMHTs2tWvXLjVt2jSdddZZ6cILL9xqXzt77Vnd1y+XXnppYT5/73vfSxs3btzlcWMOb/HLX/4yHXjggal+/fqpS5cuW32uGxHpxhtvTAMGDEiNGjVKBx98cPrd735XtM7Onq/Y+4i7fGx9+vRJTZs2TRdccEF67rnn0uzZs1Pbtm3TqFGj0sKFC9P8+fPTcccdl7761a+mlN7/gKBevXpp3Lhx6cUXX0xPPfVUmjBhQiEeDRo0KDVv3jydc845aeHChen3v/99aty4cbrhhhsK+/zud7+bjjnmmPSXv/wlLVmyJF1zzTWptLQ0LV68OG3cuDGNHz8+NW/ePL3yyivplVdeKQpTKe04jB133HHp61//enr99ddTZWVluuOOO1Ljxo3T888/v9Pb4q233kpt27ZNp512WnrmmWfS73//+3TggQcW7euNN97Y4e2TUkr/+q//mrp165amTZuWli5dmiZPnpxKS0sLTzxbXuB37949PfDAA+mpp55K/+f//J9UXl5e9CaB6jGHP7B+/frUoUOH9M1vfjM9/fTTafr06emzn/1sGjRoUGGdj3v9ctGnT5/UrFmzdPnll6fFixenyy+/PJWUlKT//b//d7rhhhvS4sWL0/e///3UunXrtGHDhvTSSy+lxo0bp3PPPTctXLgw3XfffalNmzZFHzZumWsjRoxIzz33XPrP//zPrW67HX1gumnTptS9e/d01llnpaeeeio9++yz6bTTTktdu3YtvKH4NObfRz3zzDMpItKSJUu2WrateVdVVZUeeuih1Lhx4/TAAw/s9Hcxd+7cVFJSkm6//fa0bNmyNH/+/PSzn/1sl39XW27L0aNHp7lz56YXXnih8Lu46667Cpf7ceLuN77xjdS9e/f0l7/8JS1YsCD169cvHXzwwYXH6MmTJ6f69eunvn37prlz56Z58+al7t27p9NOO61wGf/5n/+ZOnTokO699970wgsvpHvvvTe1atUq3XTTTTvct7lr7u7q3H399dfT0KFDU0VFRXrllVfS66+/nlLa++PHd7/73dS5c+f00EMPpaeffjqddNJJqVmzZoXbbGf358cffzzVrVs3/fSnP02LFi1KkydPTo0aNSrcPiml1Ldv39SjR480e/bsNG/evNSnT5/UqFGj7O4z1bk9PsnHN4qZu9Wfu/vq49ueKKf3XoMGDUotWrRIbdu2TV26dEnnnHNOWr16deFyf/Ob36SWLVsWXb/33nsvlZSUpClTpuz0tqjOfbBz586pVatWacKECen5559PY8eOTXXr1i18gFyd+xzVZ35+YPbs2alu3brp6quvTosWLUo/+9nPUsuWLYvi7l/+8pfUvHnzdNNNN6WlS5emBx54IJWXl6dLL720sE7fvn3TCSeckObOnZsWL16cfvSjH6XWrVsXHofHjBmTmjRpkv7xH/8xPfHEE+m///u/08EHH1z0uoHtW7NmTWrQoEF66KGHCstef/31wrIPx6i33nornXzyyal///6F+bSzx4ktz4MHHHBAuueee9Kzzz6bvvvd76ZmzZoVzbfq2F4Yu/rqq1OXLl3Stddem8rLy1Pnzp3TkCFDCnNkZ+66665UWlqa/uM//iM999xz6aKLLkrNmjUr2tfOXntW9/VL06ZN0ymnnJKeeeaZ9Ic//CG1bds2/eQnP6nR7UAxczilKVOmpPr166cJEyakRYsWpeuuuy6VlJSkP//5z4V1tlyH22+/PT3//PPpvPPOS02bNi3sozq9gb2PuMvH1qdPn3TEEUcUTl9++eXp+OOPL1pnxYoVKSLSokWL0rx581JEpGXLlm3z8gYNGpQ6d+6cNm/eXFj2rW99K51yyikppZT+9re/pZKSkq3+0vDYY49No0aNSil98I2B7dlRGHvjjTfS8ccfnyIi1atXLzVv3jz96U9/2uFtsMWvf/3r1Lp16/TOO+8Ulv3qV78q2tfObp933303NW7cOD3yyCNF6wwZMiSdeuqpKaUPPlS48847C+e//vrrqVGjRkUf7lI95vAHbrjhhrTffvsV/tI4pZSmTp2a6tatm1auXLnbrl8O+vTpk770pS8VTm/evDk1adIknX766YVlr7zySoqI9Oijj6af/OQnqWvXrkXfZJwwYUJq2rRp4S8Q+/Tpk7p37160zoUXXpi6d+9eOL2jQHbrrbdutY+NGzemRo0aFX7Hn8b825bDDz88/fSnPy2cHjVqVOrVq1fROmvXrk1NmjRJ9erVS6Wlpek3v/lNtS773nvvTc2bN0/r1q3b5vk1/V1tz7Bhw4q+VbmrgWzx4sUpItKsWbMKy1avXp0aNWqU/u///b8ppfdv449GxQkTJqSysrLC6YMOOijdfvvtRZd9+eWXp4qKih3u39xtscPb56PM3WIjRowofKNti705fqxbty7Vr1+/6Agpa9euTY0bN04jRoyo1v35tNNOS8cdd1zR5V5wwQXpkEMOSSmltHDhwq2+OfP888+niMjuPlPbj298wNyt+eP9vvb4tqfK6b3XHXfckX73u9+lp556Kt13332pe/fu6Ytf/GJhX1dccUXq0qXLVtu1bds2/fKXv9zpbbGz+2BK77+++s53vlM4XVVVldq1a5d+9atfpZSqd5+j+szPD5x66qnpa1/7WtGyU045pWgsxx57bLryyiuL1rn11ltThw4dUkopPfzww6l58+bp3XffLVrnoIMOKnwDfcyYMamkpCS99NJLhfP/+Mc/prp166ZXXnllp+MkpRNPPDGdddZZhdO//vWv0/77758qKyu3ilE7+8b3R215HrzqqqsKy9577710wAEHpKuvvrpG49xeGPve975XOCLhX/7ylzRjxozUo0ePakepioqKdO655xYt69WrV9G+dvbas7qvX1q1alX4o9uU3v/M98Pvm9k1+/ocPuaYY9LQoUOLln3rW98qegyOiKKjh61fvz5FRPrjH/+YUtr58xV7J//nLrtFz549C/9+8sknY8aMGds8Hv7SpUvj+OOPj2OPPTYOPfTQ6NevXxx//PHxz//8z7HffvsV1vv85z8fJSUlhdMdOnSIp59+OiIinn766aisrIwuXboUXfbGjRujdevWH/u6XHLJJbF27dp46KGHok2bNvHb3/42Tj755Hj44Yfj0EMP3eG2CxcujMMOOywaNmxYWFZRUVG0zs5un/feey/efvvtOO6444rO27Rp01b/X+qHL7tVq1bRtWvXWLhwYbWvKx8wh9+3cOHCOPzww6NJkyaFZb17946qqqpYtGhRlJWV1fr1+zQddthhhX+XlJRE69ati27DLbfHq6++GgsXLoyKioqoU6dO4fzevXvH+vXr46WXXorPfOYzERHxv/7X/ypap6KiIq677rqorKwsuk235cknn4wlS5ZEs2bNipa/++67sXTp0sLp2vj9DBw4MCZNmhSXXHJJpJTijjvuiJEjRxat06xZs1iwYEGsX78+pk+fHiNHjowDDzwwvvKVr+zwso877rjo3LlzHHjggdG/f//o379/nHTSSdG4cePCOjX5XW0xYcKEmDRpUixfvjzeeeed2LRpU/To0WOXb4MtFi5cGPXq1YtevXoVlrVu3Xqrx+jGjRvHQQcdVDjdoUOHwvg2bNgQS5cujSFDhhT9/9qbN2+OFi1a7HQM5m71mbv7thdeeCHee++9OProowvLWrRoEV27do2I6t2fFy5cGCeeeGLR5fbu3TvGjx8flZWVsWjRoqhXr14ceeSRhfMPPvjgotcNH7Wn3mf2hMc33mfukrNc3nt9+9vfLvz70EMPjcMOOywOOuigmDlzZhx77LE1u9LbsLP74Jbr9OHXCnXq1In27dsXHlOre5+j+szP9y1cuDBOOumkomUVFRUxbdq0wuknn3wyZs2aFVdccUVhWWVlZbz77rvx9ttvx5NPPhnr16/f6rq88847RfPzM5/5THTs2LFoP1s+g2jfvv3Hvi57u4EDB8bQoUPjl7/8ZZSWlsZtt90W3/72t6Nu3bq7bR8f/vyxXr16cdRRR+22zx+rqqpi48aNccsttxTuC7/5zW+iZ8+esWjRosJrm+1ZuHBhnHPOOVuNd8aMGRFRvdee1X0sPfzww4vey1VUVMT69etjxYoV0blz51249kSYwwsXLoyzzz67aFnv3r3jZz/7WdGyD78eaNKkSTRv3rzo9cCOnq8++jzD3kHcZbf4cAhav359nHDCCXH11VdvtV6HDh2ipKQkHnzwwXjkkUfigQceiF/84hdx0UUXxWOPPRaf/exnIyKifv36RdvVqVMnqqqqCpdfUlIS8+bN2+rD5I/7H6wvXbo0rr/++njmmWfi85//fES8/8T98MMPx4QJE2LixIkf6/Ijdn77PPPMMxERMXXq1KIXtxERpaWlH3v/bJs5XDO1df0+bdu6nh9etiV0bbnun7T169dHz54947bbbtvqvLZt2xb+XRu/n1NPPTUuvPDCmD9/frzzzjuxYsWKOOWUU4rWqVu3bhx88MEREdGjR49YuHBhjB07dqeBrFmzZjF//vyYOXNmPPDAAzF69Oi49NJLY+7cudGyZcvtXucd/a7uvPPOOP/88+O6666LioqKaNasWVxzzTXx2GOP7fJtUFPbGnNKKSLe/z1FRNx4441FH8xHxE5D6vYu29zdNnN35z48N7d47733PrH9sWffZ6rjk3x8Y8+W29z1+FY7cn3vdeCBB0abNm1iyZIlceyxxxZF1i02b94ca9as2a1BamfXrzr3OarP/Ky+9evXx2WXXRbf/OY3tzqvYcOGsX79+ujQoUPMnDlzq/O3vBbm4zvhhBMipRRTp06NL37xi/Hwww/Hv//7v9f2sKqtQ4cOUa9evaL41L1794iIWL58+U7D2M5U57Wnx9LaZQ5Xz86eT3b0fMXeSdxltzvyyCPj3nvvjfLy8qhXb9tTrE6dOtG7d+/o3bt3jB49Ojp37hz33XffVt+U2ZYjjjgiKisr49VXX40vf/nL21ynQYMGUVlZWeOxv/322xERW/1lUElJSbU+AO/evXvceuut8e677xa+vTt79uyidXZ2+xxyyCFRWloay5cvjz59+uxwf7Nnzy58o+qNN96IxYsXF5482HX7+hy+6aabYsOGDYU3tbNmzYq6detW+8VIda7f3qh79+5x7733RkqpEGNmzZoVzZo1iwMOOKCw3kcDzOzZs+Nzn/tctT7QPvLII+Ouu+6Kdu3aRfPmzXdpnJ/U/DvggAOiT58+cdttt8U777wTxx13XLRr126H22z568bqqFevXvTt2zf69u0bY8aMiZYtW8af//znbX6QUB2zZs2KY445Js4999zCst317Ybu3bvH5s2b47HHHotjjjkmIiJef/31WLRoURxyyCHVuoyysrLYf//944UXXoiBAwfulnFtj7lr7u5M27Zt45VXXimcfv755wvPN7k78MADo379+jF37tzCa6o333wzFi9eHP/wD/9Qrftz9+7dY9asWUWXO2vWrOjSpUuUlJRE165dY/PmzfHEE08Uvg20ZMmSeOONN7Y7rj31PpPb49vezNzdtdfKH7U3P77lIqf3Xi+99FK8/vrrhQ9JKyoqYu3atTFv3rzCfeTPf/5zVFVVbRUQtmVn98Hq2B33ObZvX5+f23r9/2FHHnlkLFq0qPBHkB915JFHxsqVK6NevXpRXl6+3X0tX748Xn755dh///0L+6nJZxD7uoYNG8Y3v/nNuO2222LJkiXRtWvXoqNufNiuPn/Onj07/uEf/iEi3v8jgXnz5sXw4cM/1ri36N27d2zevDmWLl1aOPLL4sWLIyKq9W3YLXP1jDPOKBrvFtV57Vndx9Inn3wy3nnnnWjUqFFhP02bNo1OnTrt/IqyXebw+68HBg0aVFg2a9asar+/iqje8xV7n9333Xb4/4YNGxZr1qyJU089NebOnRtLly6NP/3pTzF48OCorKyMxx57LK688sp4/PHHY/ny5TFlypR47bXXqh0lu3TpEgMHDowzzjgjpkyZEi+++GLMmTMnxo4dG1OnTo2IiPLy8sKhE1evXl14g75mzZpYsGBBPPvssxERsWjRoliwYEGsXLkyIiK6desWBx98cHzve9+LOXPmxNKlS+O6666LBx98MAYMGLDTsZ122mlRp06dGDp0aDz77LNx//33x7XXXluj26dZs2Zx/vnnxw9/+MO4+eabY+nSpTF//vz4xS9+ETfffHPRZf30pz+N6dOnxzPPPBNnnnlmtGnTplrjZMf25Tk8cODAaNiwYQwaNCieeeaZmDFjRvzLv/xLnH766YVDg+6O67c3Ovfcc2PFihXxL//yL/Hcc8/F7373uxgzZkyMHDmyKLYvX748Ro4cGYsWLYo77rgjfvGLX8SIESOqtY+BAwdGmzZt4sQTT4yHH344XnzxxZg5c2acd9558dJLL1XrMj7O/KvO+O688864++67t3rTNHbs2HjwwQfjhRdeiIULF8Z1110Xt956a3znO9/Z6eX+4Q9/iJ///OexYMGC+Nvf/ha33HJLVFVVfaw3+5/73Ofi8ccfjz/96U+xePHiuOSSS2Lu3Lm7fHkfvewTTzwxhg4dGv/zP/8TTz75ZHznO9+Jjh07bnXovR257LLLYuzYsfHzn/88Fi9eHE8//XRMnjw5xo0bt1vGuYW5a+7uzD/+4z/G9ddfH0888UQ8/vjjcc4552z1V8O5atasWQwaNCguuOCCmDFjRvz1r3+NIUOGRN26daNOnTrVuj//6Ec/iunTp8fll18eixcvjptvvjmuv/76OP/88yPi/efmvn37xtlnnx1z5syJJ554Is4+++xo1KhR0aHOP2xPvc/k9vi2NzN3d+3x/qP25se3XOyp773Wr18fF1xwQcyePTuWLVsW06dPjxNPPDEOPvjg6NevX0S8/2Fs//79Y+jQoTFnzpyYNWtWDB8+PL797W8XItWO7Ow+WB274z7H9u3L8/O8886LadOmxbXXXhvPP/98XH/99UWHZI6IGD16dNxyyy1x2WWXxV//+tdYuHBh3HnnnXHxxRdHRETfvn2joqIiBgwYEA888EAsW7YsHnnkkbjooovi8ccfL1zOls8gnnzyyXj44YfjvPPOi5NPPtkhmWtg4MCBMXXq1Jg0adIO/3iuvLw8nnrqqVi0aFGsXr262kermDBhQtx3333x3HPPxbBhw+KNN96Is846q1rbLlmypPC51TvvvBMLFiyIBQsWxKZNmyLi/Xly5JFHxllnnRVPPPFEzJs3L773ve/FcccdV61DyY4YMSIm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
+"
+class="
+"
+>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
