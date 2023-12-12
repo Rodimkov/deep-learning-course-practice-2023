@@ -1,0 +1,6 @@
+ipywidgets
+matplotlib
+notebook
+torch
+torchvision
+tqdm
