@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>b0f45f2e67924cbe9e8b4b856764a8ca</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="cell code" data-execution_count="1"
+data-_cell_guid="b1076dfc-b9ad-4769-8c92-a6c4dae69d19"
+data-_uuid="8f2839f25d086af736a60e9eeb907d3b93b6e0e5"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-12T23:42:30.106115Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-12T23:42:30.105750Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-12T23:42:34.054400Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-12T23:42:34.053533Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-12T23:42:30.106084Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.utils.data <span class="im">import</span> Dataset, DataLoader</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torchvision</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchvision <span class="im">import</span> transforms</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torchvision <span class="im">import</span> datasets, models, transforms</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> PIL</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn.functional <span class="im">as</span> F</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Tuple</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm <span class="im">import</span> tqdm</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.patches <span class="im">as</span> patches</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.font_manager <span class="im">import</span> FontProperties</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">&quot;ignore&quot;</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>train_on_gpu <span class="op">=</span> torch.cuda.is_available()</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>/opt/conda/lib/python3.10/site-packages/scipy/__init__.py:146: UserWarning: A NumPy version &gt;=1.16.5 and &lt;1.23.0 is required for this version of SciPy (detected version 1.24.3
+  warnings.warn(f&quot;A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}&quot;
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="2"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-12T23:42:34.057517Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-12T23:42:34.056667Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-12T23:42:34.068041Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-12T23:42:34.067121Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-12T23:42:34.057481Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SimpsonsDataset(Dataset):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, files_path, data_transforms):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.files_path <span class="op">=</span> files_path</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.transform <span class="op">=</span> data_transforms</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">&#39;test&#39;</span> <span class="kw">not</span> <span class="kw">in</span> <span class="bu">str</span>(<span class="va">self</span>.files_path[<span class="dv">0</span>]):</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.labels <span class="op">=</span> [path.parent.name <span class="cf">for</span> path <span class="kw">in</span> <span class="va">self</span>.files_path]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.label_encoder <span class="op">=</span> LabelEncoder()</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.label_encoder.fit(<span class="va">self</span>.labels)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;label_encoder.pkl&#39;</span>, <span class="st">&#39;wb&#39;</span>) <span class="im">as</span> le_dump_file:</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                pickle.dump(<span class="va">self</span>.label_encoder, le_dump_file)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__len__</span>(<span class="va">self</span>):</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">len</span>(<span class="va">self</span>.files_path)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__getitem__</span>(<span class="va">self</span>, idx):</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        img_path <span class="op">=</span> <span class="bu">str</span>(<span class="va">self</span>.files_path[idx])</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        image <span class="op">=</span> Image.<span class="bu">open</span>(img_path).convert(<span class="st">&#39;RGB&#39;</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        image <span class="op">=</span> <span class="va">self</span>.transform(image)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">&#39;test&#39;</span> <span class="kw">in</span> <span class="bu">str</span>(<span class="va">self</span>.files_path[<span class="dv">0</span>]):</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> image</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>            label_str <span class="op">=</span> <span class="bu">str</span>(<span class="va">self</span>.files_path[idx].parent.name)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>            label <span class="op">=</span> <span class="va">self</span>.label_encoder.transform([label_str]).item()</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> image, label</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>     </span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="3"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-12T23:42:34.070226Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-12T23:42:34.069180Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-12T23:42:53.690347Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-12T23:42:53.689337Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-12T23:42:34.070177Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>train_dir <span class="op">=</span> Path(<span class="st">&#39;/kaggle/input/the-simpsons-characters-dataset/simpsons_dataset/&#39;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>test_dir <span class="op">=</span> Path(<span class="st">&#39;/kaggle/input/the-simpsons-characters-dataset/kaggle_simpson_testset/&#39;</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>train_val_files_path <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">list</span>(train_dir.rglob(<span class="st">&#39;*.jpg&#39;</span>)))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>test_path <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">list</span>(test_dir.rglob(<span class="st">&#39;*.jpg&#39;</span>)))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>train_val_labels <span class="op">=</span> [path.parent.name <span class="cf">for</span> path <span class="kw">in</span> train_val_files_path]</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>train_files_path, val_files_path <span class="op">=</span> train_test_split(train_val_files_path, test_size <span class="op">=</span> <span class="fl">0.3</span>, stratify<span class="op">=</span>train_val_labels)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>num_classes <span class="op">=</span> <span class="bu">len</span>(np.unique(train_val_labels))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Number of classes:&quot;</span>, num_classes)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Number of classes: 42
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="4"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-12T23:42:53.693690Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-12T23:42:53.693042Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-12T23:42:53.793948Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-12T23:42:53.793073Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-12T23:42:53.693653Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>input_size <span class="op">=</span> <span class="dv">224</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>train_dataset <span class="op">=</span> SimpsonsDataset(train_files_path, transforms.Compose([transforms.Resize((input_size,input_size)), transforms.ToTensor()]))</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>val_dataset <span class="op">=</span> SimpsonsDataset(val_files_path, transforms.Compose([transforms.Resize((input_size,input_size)), transforms.ToTensor()]))</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>test_dataset <span class="op">=</span> SimpsonsDataset(test_path, transforms.Compose([transforms.Resize((input_size,input_size)), transforms.ToTensor()]))</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Number of train samples:&quot;</span>, <span class="bu">len</span>(train_dataset))</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Number of test samples:&quot;</span>, <span class="bu">len</span>(test_dataset))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Number of train samples: 29306
+Number of test samples: 990
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="5"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-12T23:42:53.795487Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-12T23:42:53.795115Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-12T23:42:53.804573Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-12T23:42:53.803656Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-12T23:42:53.795453Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>classes <span class="op">=</span> [<span class="st">&#39;abraham_grampa_simpson&#39;</span>, <span class="st">&#39;agnes_skinner&#39;</span>, <span class="st">&#39;apu_nahasapeemapetilon&#39;</span>, <span class="st">&#39;barney_gumble&#39;</span>, <span class="st">&#39;bart_simpson&#39;</span>, <span class="st">&#39;carl_carlson&#39;</span>,</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;charles_montgomery_burns&#39;</span>, <span class="st">&#39;chief_wiggum&#39;</span>, <span class="st">&#39;cletus_spuckler&#39;</span>, <span class="st">&#39;comic_book_guy&#39;</span>, <span class="st">&#39;disco_stu&#39;</span>, <span class="st">&#39;edna_krabappel&#39;</span>, <span class="st">&#39;fat_tony&#39;</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;gil&#39;</span>, <span class="st">&#39;groundskeeper_willie&#39;</span>, <span class="st">&#39;homer_simpson&#39;</span>, <span class="st">&#39;kent_brockman&#39;</span>, <span class="st">&#39;krusty_the_clown&#39;</span>, <span class="st">&#39;lenny_leonard&#39;</span>, <span class="st">&#39;lionel_hutz&#39;</span>, <span class="st">&#39;lisa_simpson&#39;</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;maggie_simpson&#39;</span>, <span class="st">&#39;marge_simpson&#39;</span>, <span class="st">&#39;martin_prince&#39;</span>, <span class="st">&#39;mayor_quimby&#39;</span>, <span class="st">&#39;milhouse_van_houten&#39;</span>,<span class="st">&#39;miss_hoover&#39;</span>, <span class="st">&#39;moe_szyslak&#39;</span>, <span class="st">&#39;ned_flanders&#39;</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;nelson_muntz&#39;</span>, <span class="st">&#39;otto_mann&#39;</span>, <span class="st">&#39;patty_bouvier&#39;</span>, <span class="st">&#39;principal_skinner&#39;</span>, <span class="st">&#39;professor_john_frink&#39;</span>,<span class="st">&#39;rainier_wolfcastle&#39;</span>, <span class="st">&#39;ralph_wiggum&#39;</span>, <span class="st">&#39;selma_bouvier&#39;</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;sideshow_bob&#39;</span>, <span class="st">&#39;sideshow_mel&#39;</span>,<span class="st">&#39;simpsons_dataset&#39;</span>, <span class="st">&#39;snake_jailbird&#39;</span>, <span class="st">&#39;troy_mcclure&#39;</span>, <span class="st">&#39;waylon_smithers&#39;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> show_images(batch_size, dload): </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    f, ax <span class="op">=</span> plt.subplots(<span class="bu">int</span>(batch_size <span class="op">/</span> <span class="dv">4</span>), <span class="dv">4</span>, figsize <span class="op">=</span> (<span class="dv">12</span>, <span class="dv">12</span>))</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> ax.flatten()</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    dataiter <span class="op">=</span> <span class="bu">iter</span>(dload)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    images, labels <span class="op">=</span> <span class="bu">next</span>(dataiter)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    j <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> a <span class="kw">in</span> ax:</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>        npimg <span class="op">=</span> images[j].numpy()</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>        a.imshow(np.transpose(npimg, (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>)))</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>        a.set_title(classes[labels[j]])</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        j<span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    plt.subplots_adjust(left<span class="op">=</span><span class="va">None</span>, bottom<span class="op">=</span><span class="fl">0.2</span>, right<span class="op">=</span><span class="va">None</span>, top<span class="op">=</span><span class="va">None</span>, wspace<span class="op">=</span><span class="va">None</span>, hspace<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="6"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-12T23:42:53.806188Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-12T23:42:53.805851Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-12T23:42:56.321305Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-12T23:42:56.320257Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-12T23:42:53.806153Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>train_dataloader <span class="op">=</span> DataLoader(train_dataset, batch_size<span class="op">=</span><span class="dv">32</span>, shuffle<span class="op">=</span><span class="va">True</span>, num_workers<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>val_dataloader <span class="op">=</span> DataLoader(val_dataset, batch_size<span class="op">=</span><span class="dv">32</span>, shuffle<span class="op">=</span><span class="va">False</span>, num_workers<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>test_dataloader <span class="op">=</span> DataLoader(test_dataset, batch_size<span class="op">=</span><span class="dv">32</span>, shuffle<span class="op">=</span><span class="va">False</span>, num_workers<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>show_images(<span class="dv">12</span>, train_dataloader)</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_9d84f57769fc48ae9688465368a710f2/04ec1273b92ea103f050393db53c0fe6c2b67bbd.png" /></p>
+</div>
+</div>
+<div class="cell code" data-execution_count="7"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-12T23:42:56.323176Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-12T23:42:56.322837Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-12T23:42:56.334348Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-12T23:42:56.333347Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-12T23:42:56.323146Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BasicBlock(nn.Module):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, in_planes, planes, stride<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>(BasicBlock, <span class="va">self</span>).<span class="fu">__init__</span>()</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.block <span class="op">=</span> nn.Sequential(</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>            nn.Conv2d(in_planes, planes, kernel_size<span class="op">=</span><span class="dv">3</span>, stride<span class="op">=</span>stride, padding<span class="op">=</span><span class="dv">1</span>, bias<span class="op">=</span><span class="va">False</span>),</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>            nn.ReLU(),</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>            nn.MaxPool2d(<span class="dv">2</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> <span class="va">self</span>.block(x)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> out</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ResNet(nn.Module):</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, block, num_classes<span class="op">=</span><span class="dv">42</span>):</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>(ResNet, <span class="va">self</span>).<span class="fu">__init__</span>()</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.in_planes <span class="op">=</span> <span class="dv">64</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.conv1 <span class="op">=</span> nn.Conv2d(<span class="dv">3</span>, <span class="dv">32</span>, kernel_size<span class="op">=</span><span class="dv">3</span>, stride<span class="op">=</span><span class="dv">1</span>, padding<span class="op">=</span><span class="dv">1</span>, bias<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.relu <span class="op">=</span> nn.ReLU()</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.max_pool <span class="op">=</span> nn.MaxPool2d(<span class="dv">2</span>)</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.blocks <span class="op">=</span> nn.Sequential(block(<span class="dv">32</span>, <span class="dv">64</span>, <span class="dv">1</span>), block(<span class="dv">64</span>, <span class="dv">128</span>, <span class="dv">1</span>))</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.blocks1 <span class="op">=</span> nn.Sequential(block(<span class="dv">128</span>, <span class="dv">256</span>, <span class="dv">1</span>), block(<span class="dv">256</span>, <span class="dv">256</span>, <span class="dv">1</span>))</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc <span class="op">=</span> nn.Linear(<span class="dv">16</span> <span class="op">*</span> <span class="dv">28</span> <span class="op">*</span> <span class="dv">28</span>, num_classes)</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> <span class="va">self</span>.conv1(x)</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> <span class="va">self</span>.relu(out)</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> <span class="va">self</span>.max_pool(out)</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> <span class="va">self</span>.blocks(out)</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> <span class="va">self</span>.blocks1(out)</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> out.view(out.size(<span class="dv">0</span>), <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> <span class="va">self</span>.fc(out)</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> out</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="8"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-12T23:42:56.336705Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-12T23:42:56.335978Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-12T23:42:56.371112Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-12T23:42:56.370257Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-12T23:42:56.336671Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>resNet <span class="op">=</span> ResNet(BasicBlock)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>resNet</span></code></pre></div>
+<div class="output execute_result" data-execution_count="8">
+<pre><code>ResNet(
+  (conv1): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (relu): ReLU()
+  (max_pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (blocks): Sequential(
+    (0): BasicBlock(
+      (block): Sequential(
+        (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (1): ReLU()
+        (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      )
+    )
+    (1): BasicBlock(
+      (block): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (1): ReLU()
+        (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      )
+    )
+  )
+  (blocks1): Sequential(
+    (0): BasicBlock(
+      (block): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (1): ReLU()
+        (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      )
+    )
+    (1): BasicBlock(
+      (block): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (1): ReLU()
+        (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      )
+    )
+  )
+  (fc): Linear(in_features=12544, out_features=42, bias=True)
+)</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="9"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-12T23:42:56.372315Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-12T23:42:56.372040Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-12T23:42:59.189012Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-12T23:42:59.188246Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-12T23:42:56.372292Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>learning_rate <span class="op">=</span> <span class="fl">0.001</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>num_epochs <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>device <span class="op">=</span> torch.device(<span class="st">&quot;cuda:0&quot;</span> <span class="cf">if</span> torch.cuda.is_available() <span class="cf">else</span> <span class="st">&quot;cpu&quot;</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>resNet.to(device)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>loss_function <span class="op">=</span> torch.nn.CrossEntropyLoss()</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.Adam(resNet.parameters(), lr <span class="op">=</span> learning_rate)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>device</span></code></pre></div>
+<div class="output execute_result" data-execution_count="9">
+<pre><code>device(type=&#39;cuda&#39;, index=0)</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="10"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-12T23:42:59.191764Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-12T23:42:59.191479Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-13T00:07:17.599047Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-13T00:07:17.598016Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-12T23:42:59.191739Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm <span class="im">import</span> tqdm</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(num_epochs):</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    start_t <span class="op">=</span> time.time()</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    correct <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    running_loss <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> inputs, labels <span class="kw">in</span> tqdm(train_dataloader, desc<span class="op">=</span><span class="st">&#39;train batches&#39;</span>, total <span class="op">=</span> <span class="bu">len</span>(train_dataloader)):</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>        inputs, labels <span class="op">=</span> inputs.to(device), labels.to(device)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>        optimizer.zero_grad()</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>        outputs <span class="op">=</span> resNet(inputs)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>        _, predicted <span class="op">=</span> torch.<span class="bu">max</span>(outputs.data, <span class="dv">1</span>)</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>        correct <span class="op">+=</span> <span class="bu">int</span>((predicted <span class="op">==</span> labels).<span class="bu">sum</span>())</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>        loss <span class="op">=</span> loss_function(outputs, labels)</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>        loss.backward()</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>        optimizer.step()</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> <span class="bu">len</span>(outputs)</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>        running_loss <span class="op">+=</span> loss.item()</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    end_t <span class="op">=</span> time.time()</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&#39;Epoch = </span><span class="sc">{</span>epoch <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">, Loss = </span><span class="sc">{</span>running_loss <span class="op">/</span> <span class="bu">len</span>(train_dataloader)<span class="sc">}</span><span class="ss">, Time = </span><span class="sc">{</span>end_t <span class="op">-</span> start_t<span class="sc">}</span><span class="ss">, Accuracy = </span><span class="sc">{</span>correct <span class="op">/</span> total<span class="sc">}</span><span class="ss">&#39;</span>)</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [01:23&lt;00:00, 10.97it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 1, Loss = 1.9591666477280933, Time = 83.53608679771423, Accuracy = 0.46338633726881867
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:56&lt;00:00, 16.17it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 2, Loss = 0.5518640673040173, Time = 56.65665602684021, Accuracy = 0.8502013239609636
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:56&lt;00:00, 16.16it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 3, Loss = 0.21250833420786502, Time = 56.69454264640808, Accuracy = 0.9391592165426875
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:56&lt;00:00, 16.25it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 4, Loss = 0.10712924184056896, Time = 56.367663860321045, Accuracy = 0.96778816624582
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:56&lt;00:00, 16.10it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 5, Loss = 0.0732459771929448, Time = 56.896486043930054, Accuracy = 0.9784003275779704
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:56&lt;00:00, 16.16it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 6, Loss = 0.06892666376141707, Time = 56.68795824050903, Accuracy = 0.9788780454514434
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 16.05it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 7, Loss = 0.05161335433932162, Time = 57.06836175918579, Accuracy = 0.9854637275643213
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:56&lt;00:00, 16.13it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 8, Loss = 0.052188855634506474, Time = 56.788269996643066, Accuracy = 0.9847130280488637
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:56&lt;00:00, 16.17it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 9, Loss = 0.04306657555717049, Time = 56.649996280670166, Accuracy = 0.9875793352897018
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 16.03it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 10, Loss = 0.04829942528608805, Time = 57.139082193374634, Accuracy = 0.9857025865010578
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 15.94it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 11, Loss = 0.0439290778129582, Time = 57.45616173744202, Accuracy = 0.987203985531973
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 15.98it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 12, Loss = 0.03810968549710871, Time = 57.33494544029236, Accuracy = 0.9894560840783457
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:59&lt;00:00, 15.52it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 13, Loss = 0.040436131772587605, Time = 59.02125835418701, Accuracy = 0.9889783662048727
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 15.98it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 14, Loss = 0.032751730009116145, Time = 57.32588076591492, Accuracy = 0.9911280966355013
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 16.00it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 15, Loss = 0.03512220465254451, Time = 57.243370056152344, Accuracy = 0.9904456425305398
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 15.97it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 16, Loss = 0.03541437216652006, Time = 57.37419295310974, Accuracy = 0.9909233604040129
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 16.02it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 17, Loss = 0.033819436688744306, Time = 57.1807656288147, Accuracy = 0.9915034463932301
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 15.90it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 18, Loss = 0.032445463639663316, Time = 57.63010621070862, Accuracy = 0.9911280966355013
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 16.02it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 19, Loss = 0.032321301768144864, Time = 57.177525758743286, Accuracy = 0.9917423053299665
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 15.87it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 20, Loss = 0.03156681516899595, Time = 57.708367347717285, Accuracy = 0.9920835323824473
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 16.00it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 21, Loss = 0.02851598634719642, Time = 57.26356840133667, Accuracy = 0.9925612502559202
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 15.88it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 22, Loss = 0.02854120088068697, Time = 57.70130920410156, Accuracy = 0.992424759434928
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:57&lt;00:00, 15.97it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 23, Loss = 0.032497501095506684, Time = 57.35106611251831, Accuracy = 0.9918105507404626
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:58&lt;00:00, 15.77it/s]
+</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 24, Loss = 0.027076254766209652, Time = 58.103124141693115, Accuracy = 0.9934143178871221
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>train batches: 100%|██████████| 916/916 [00:58&lt;00:00, 15.78it/s]</code></pre>
+</div>
+<div class="output stream stdout">
+<pre><code>Epoch = 25, Loss = 0.029725121723781205, Time = 58.04006791114807, Accuracy = 0.9924588821401761
+</code></pre>
+</div>
+<div class="output stream stderr">
+<pre><code>
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="13"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-13T00:22:43.723300Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-13T00:22:43.722507Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-13T00:23:06.200836Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-13T00:23:06.199726Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-13T00:22:43.723269Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb67"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> f1_score</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>all_preds <span class="op">=</span> []</span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>all_labels <span class="op">=</span> []</span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> data <span class="kw">in</span> val_dataloader:</span>
+<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a>        images, labels <span class="op">=</span> data</span>
+<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a>        images, labels <span class="op">=</span> images.to(device), labels.to(device)</span>
+<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a>        outputs <span class="op">=</span> resNet(images)</span>
+<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a>        _, preds <span class="op">=</span> torch.<span class="bu">max</span>(outputs, <span class="dv">1</span>)</span>
+<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a>        all_preds.extend(preds.cpu().numpy())</span>
+<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a>        all_labels.extend(labels.cpu().numpy())</span>
+<span id="cb67-14"><a href="#cb67-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-15"><a href="#cb67-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Вычисление F1-score</span></span>
+<span id="cb67-16"><a href="#cb67-16" aria-hidden="true" tabindex="-1"></a>f1 <span class="op">=</span> f1_score(all_labels, all_preds, average<span class="op">=</span><span class="st">&#39;weighted&#39;</span>)</span>
+<span id="cb67-17"><a href="#cb67-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;F1-score (weighted): </span><span class="sc">{</span>f1<span class="sc">}</span><span class="ss">&#39;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>F1-score (weighted): 0.9558488073313716
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="14"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-13T00:27:22.918707Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-13T00:27:22.917846Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-13T00:27:22.939389Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-13T00:27:22.938212Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-13T00:27:22.918669Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb69"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>torch.save(resNet.state_dict(), <span class="st">&#39;simpsons_model.pth&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="22"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-13T00:39:35.074146Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-13T00:39:35.073790Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-13T00:39:35.085435Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-13T00:39:35.084276Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-13T00:39:35.074117Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb70"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predictions(dload, size, mode):</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>    f, ax <span class="op">=</span> plt.subplots(<span class="bu">int</span>(size <span class="op">/</span> <span class="dv">4</span>), <span class="dv">4</span>, figsize <span class="op">=</span> (<span class="dv">12</span>, <span class="dv">12</span>))</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> ax.flatten()</span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> mode:</span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>        dataiter <span class="op">=</span> <span class="bu">iter</span>(val_dataloader)</span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>        images, labels <span class="op">=</span> <span class="bu">next</span>(dataiter)</span>
+<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a>        images, labels <span class="op">=</span> images.to(device), labels.to(device)</span>
+<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb70-10"><a href="#cb70-10" aria-hidden="true" tabindex="-1"></a>        dataiter <span class="op">=</span> <span class="bu">iter</span>(test_dataloader)</span>
+<span id="cb70-11"><a href="#cb70-11" aria-hidden="true" tabindex="-1"></a>        images <span class="op">=</span> <span class="bu">next</span>(dataiter)</span>
+<span id="cb70-12"><a href="#cb70-12" aria-hidden="true" tabindex="-1"></a>        images <span class="op">=</span> images.to(device)</span>
+<span id="cb70-13"><a href="#cb70-13" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb70-14"><a href="#cb70-14" aria-hidden="true" tabindex="-1"></a>    j <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb70-15"><a href="#cb70-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> a <span class="kw">in</span> ax:</span>
+<span id="cb70-16"><a href="#cb70-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> torch.no_grad():</span>
+<span id="cb70-17"><a href="#cb70-17" aria-hidden="true" tabindex="-1"></a>            output <span class="op">=</span> resNet(images[j].unsqueeze(<span class="dv">0</span>))</span>
+<span id="cb70-18"><a href="#cb70-18" aria-hidden="true" tabindex="-1"></a>            probabilities <span class="op">=</span> torch.nn.functional.softmax(output, dim<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb70-19"><a href="#cb70-19" aria-hidden="true" tabindex="-1"></a>            predicted_class <span class="op">=</span> torch.argmax(probabilities, dim<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb70-20"><a href="#cb70-20" aria-hidden="true" tabindex="-1"></a>        pred_p <span class="op">=</span> np.<span class="bu">max</span>(probabilities.cpu().numpy()) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb70-21"><a href="#cb70-21" aria-hidden="true" tabindex="-1"></a>        npimg <span class="op">=</span> images[j].cpu().numpy()</span>
+<span id="cb70-22"><a href="#cb70-22" aria-hidden="true" tabindex="-1"></a>        a.imshow(np.transpose(npimg, (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>)))</span>
+<span id="cb70-23"><a href="#cb70-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> mode:</span>
+<span id="cb70-24"><a href="#cb70-24" aria-hidden="true" tabindex="-1"></a>            a.set_title(classes[labels[j]])            </span>
+<span id="cb70-25"><a href="#cb70-25" aria-hidden="true" tabindex="-1"></a>        a.text(<span class="dv">5</span>, <span class="dv">60</span>, <span class="st">&#39;</span><span class="sc">{}</span><span class="st"> :</span><span class="ch">\n</span><span class="st"> </span><span class="sc">{}</span><span class="st">%&#39;</span>.<span class="bu">format</span>(classes[predicted_class], pred_p), fontsize <span class="op">=</span> <span class="dv">10</span>, color <span class="op">=</span><span class="st">&#39;black&#39;</span>, backgroundcolor <span class="op">=</span><span class="st">&#39;white&#39;</span>) </span>
+<span id="cb70-26"><a href="#cb70-26" aria-hidden="true" tabindex="-1"></a>        j<span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb70-27"><a href="#cb70-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb70-28"><a href="#cb70-28" aria-hidden="true" tabindex="-1"></a>    plt.subplots_adjust(left<span class="op">=</span><span class="va">None</span>, bottom<span class="op">=</span><span class="fl">0.2</span>, right<span class="op">=</span><span class="va">None</span>, top <span class="op">=</span> <span class="va">None</span>, wspace<span class="op">=</span><span class="va">None</span>, hspace<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb70-29"><a href="#cb70-29" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="23"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-13T00:39:35.781948Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-13T00:39:35.780970Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-13T00:39:38.427268Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-13T00:39:38.426188Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-13T00:39:35.781907Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb71"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>predictions(val_dataloader, <span class="dv">12</span>, <span class="va">True</span>)</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_9d84f57769fc48ae9688465368a710f2/025e7563b52f81bd94af46c6963412f7d6d5c3ed.png" /></p>
+</div>
+</div>
+<div class="cell code" data-execution_count="24"
+data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-12-13T00:39:38.429689Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-12-13T00:39:38.429355Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-12-13T00:39:40.936742Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-12-13T00:39:40.935292Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-12-13T00:39:38.429659Z&quot;}"
+data-trusted="true">
+<div class="sourceCode" id="cb72"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>predictions(test_dataloader, <span class="dv">12</span>, <span class="va">False</span>)</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_9d84f57769fc48ae9688465368a710f2/454686445873b429dad4733b32d727485ef5734d.png" /></p>
+</div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb73"><pre
+class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+</body>
+</html>
